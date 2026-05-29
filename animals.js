@@ -1,4 +1,4 @@
-'use strict'
+// 'use strict'
 class Animal {
   constructor(name) {
     this.name = name;
@@ -53,12 +53,12 @@ if (isValid) {
 }
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------
-class Car {
+class Car2 {
   constructor() {
     this.drive = function () { console.log(this); };
   }
 }
-const pride = new Car()
+const pride = new Car2()
 
 pride.drive()
 
