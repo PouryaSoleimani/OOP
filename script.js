@@ -9,4 +9,15 @@ const circle = {
   }
 }
 
-circle.draw()
+function createCircle(radius) {
+  return {
+    radius: radius,
+    draw: function () {
+      console.log('draw');
+    }
+  }
+}
+
+const circle2 = createCircle(1)
+const circle3 = createCircle(3)
+circle2.draw()
