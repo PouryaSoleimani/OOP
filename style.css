@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "JetBrains Mono", "Vazir";
   background-color: black;
