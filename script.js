@@ -49,6 +49,17 @@ function Car(name, speed) {
 const car1 = new Car("PORSCHE", 120)
 car1.move()
 car1.maxSpeed()
+car1.model = 2024
+console.log(car1.model)
+car1['color'] = "black"
+
+console.log(car1.color)
+
+const propertyName = 'is4wd'
+
+car1[propertyName] = false
+
+console.log(car1.is4wd)
 
 // ---------------------------------------------------------------------------------------------------------
 // $$___PRIMITIVE TYPES
