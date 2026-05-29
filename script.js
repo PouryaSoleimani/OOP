@@ -59,7 +59,7 @@ car1[propertyName] = false
 
 // DELETING PROPERTIES
 delete car1.model
-delete pride[propertyName]
+delete car1[propertyName]
 
 // ---------------------------------------------------------------------------------------------------------
 // $$___PRIMITIVE TYPES
