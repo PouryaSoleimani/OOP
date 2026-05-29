@@ -64,3 +64,56 @@ pride.drive()
 
 const drive = pride.drive
 drive()
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------
+
+class Wallet {
+  #money;
+
+  constructor(money) {
+    this.#money = money
+  }
+
+  getBalance() {
+    return this.#money
+  }
+
+  add(amount) {
+    if (amount <= 0) {
+      throw new Error('Invalid amout`')
+    }
+
+    this.#money += amount
+  }
+
+  spend(amount) {
+    if (amount >= this.#money) {
+      throw new Error('Insufficient Balance')
+    }
+
+    this.#money -= amount
+  }
+
+}
+
+const myWallet = new Wallet(0)
+
+myWallet.add(900)
+const balance = myWallet.getBalance()
+
+console.log('BALANCE =>', balance)
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------
+
+class BankAccount {
+  #balance = 2000
+
+  get Balance() {
+    return this.#balance
+  }
+}
+
+const myBankAccount = new BankAccount()
+
+const b = myBankAccount.Balance
+console.log(b)
