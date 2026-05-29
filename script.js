@@ -53,13 +53,13 @@ car1.model = 2024
 console.log(car1.model)
 car1['color'] = "black"
 
-console.log(car1.color)
-
+// ADDING PROPRETIES
 const propertyName = 'is4wd'
-
 car1[propertyName] = false
 
-console.log(car1.is4wd)
+// DELETING PROPERTIES
+delete car1.model
+delete pride[propertyName]
 
 // ---------------------------------------------------------------------------------------------------------
 // $$___PRIMITIVE TYPES
