@@ -60,6 +60,23 @@ car1[propertyName] = false
 delete car1.model
 delete car1[propertyName]
 
+// ITERATION IN OBJECTS
+// 1 - FOR_IN LOOF
+for (const key in car1) {
+  if (Object.prototype.hasOwnProperty.call(car1, key)) {
+    const element = car1[key];
+    // console.log(typeof element)
+  }
+}
+
+// 2- Object.keys(object)
+const keys = Object.keys(car1)
+console.log('KEYS => ', keys)
+
+// 3 - IN
+if ('speed' in car1) console.log('SPEED IS IN CAR1')
+
+
 // ---------------------------------------------------------------------------------------------------------
 // $$___PRIMITIVE TYPES
 // NUMBER
