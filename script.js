@@ -45,7 +45,7 @@ function Car(name, speed) {
   this.maxSpeed = function () {
     console.log('MAXSPEED =>', this.speed)
   }
-  
+
   let calculateSpeed = function (speed) {
     return Number(speed).toLocaleString()
   }
