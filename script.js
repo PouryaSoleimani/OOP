@@ -21,4 +21,15 @@ function createCircle(radius) {
 const circle2 = createCircle(1)
 const circle3 = createCircle(3)
 circle2.draw()
-      
+
+// OBJECT CONSTRUCTORS
+function Circle(radius) {
+  this.radius = radius
+  this.draw = function () {
+    console.log('DRAW (CONSTRUCTORS)')
+  }
+}
+
+const newCicrle = new Circle()
+
+newCicrle.draw()
