@@ -45,3 +45,17 @@ function Car(speed) {
 
 const car1 = new Car(120)
 car1.move()
+
+// $$___PRIMITIVE TYPES
+// NUMBER
+// STRING
+// BOOLEAN
+// UNDEFINED
+// NULL
+// SYMBOL
+
+// $$___REFERENCE TYPES
+// ARRAYS
+// OBJECTS
+// FUNCTIONS
+
