@@ -36,16 +36,21 @@ newCicrle.draw()
 
 let personObject = { firstName: 'mohammad', lastName: 'hashemi' }
 
-function Car(speed) {
+function Car(name, speed) {
   this.speed = speed
+  this.maxSpeed = function () {
+    console.log('MAXSPEED =>', this.speed)
+  }
   this.move = function () {
     console.log(`MOVING AT ${speed}km/h`)
   }
 }
 
-const car1 = new Car(120)
+const car1 = new Car("PORSCHE", 120)
 car1.move()
+car1.maxSpeed()
 
+// ---------------------------------------------------------------------------------------------------------
 // $$___PRIMITIVE TYPES
 // NUMBER
 // STRING
