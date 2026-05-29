@@ -1,3 +1,4 @@
+'use strict'
 class Animal {
   constructor(name) {
     this.name = name;
@@ -55,6 +56,9 @@ if (isValid) {
 const Car = function () {
   this.drive = function () { console.log(this) }
 }
-const price = new Car()
+const pride = new Car()
 
-price.drive()
+pride.drive()
+
+const drive = pride.drive
+drive()
