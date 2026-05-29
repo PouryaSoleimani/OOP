@@ -1,0 +1,28 @@
+table {
+  outline: 8px solid #29292986;
+  padding: 8px;
+  background-color: #303030;
+  border-radius: 8px;
+  margin: 32px auto;
+  border-spacing: 8px;
+  font-family: "JetBrains Mono";
+}
+
+tr {
+  margin: 4px;
+}
+
+td,
+th {
+  outline: 3px solid #ffffff30;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  border-radius: 6px;
+}
+
+th {
+  background-color: white;
+  color: black;
+}
