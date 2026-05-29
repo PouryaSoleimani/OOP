@@ -53,8 +53,10 @@ if (isValid) {
 }
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------
-const Car = function () {
-  this.drive = function () { console.log(this) }
+class Car {
+  constructor() {
+    this.drive = function () { console.log(this); };
+  }
 }
 const pride = new Car()
 
