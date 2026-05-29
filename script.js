@@ -33,3 +33,15 @@ function Circle(radius) {
 const newCicrle = new Circle()
 
 newCicrle.draw()
+
+let personObject = { firstName: 'mohammad', lastName: 'hashemi' }
+
+function Car(speed) {
+  this.speed = speed
+  this.move = function () {
+    console.log('MOVING')
+  }
+}
+
+const car1 = new Car(250)
+car1.move()
