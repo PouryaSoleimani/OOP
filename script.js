@@ -39,9 +39,9 @@ let personObject = { firstName: 'mohammad', lastName: 'hashemi' }
 function Car(speed) {
   this.speed = speed
   this.move = function () {
-    console.log('MOVING')
+    console.log(`MOVING AT ${speed}km/h`)
   }
 }
 
-const car1 = new Car(250)
+const car1 = new Car(120)
 car1.move()
