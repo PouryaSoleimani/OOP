@@ -109,11 +109,20 @@ class BankAccount {
   #balance = 2000
 
   get Balance() {
-    return this.#balance
+    return `AMOUNT: $${this.#balance.toLocaleString()}`
+  }
+
+  set Balance(amount) {
+    if (typeof amount !== 'number' || amount <= 0) {
+      throw new Error('Amount is Not valid')
+    }
+    this.#balance += amount
+    console.log('BALANCE CHANGED')
   }
 }
 
 const myBankAccount = new BankAccount()
 
+myBankAccount.Balance = 1000
 const b = myBankAccount.Balance
-console.log(b)
+console.log(b) 
