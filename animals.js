@@ -125,4 +125,4 @@ const myBankAccount = new BankAccount()
 
 myBankAccount.Balance = 1000
 const b = myBankAccount.Balance
-console.log(b) 
+console.log(b)
