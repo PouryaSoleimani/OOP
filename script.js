@@ -50,7 +50,6 @@ const car1 = new Car("PORSCHE", 120)
 car1.move()
 car1.maxSpeed()
 car1.model = 2024
-console.log(car1.model)
 car1['color'] = "black"
 
 // ADDING PROPRETIES
