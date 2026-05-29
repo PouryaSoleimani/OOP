@@ -1,3 +1,4 @@
+// LITERAL OBJECTS
 const circle = {
   radius: 1,
   location: {
@@ -8,6 +9,7 @@ const circle = {
     console.log('DRAW')
   }
 }
+
 // OBJECT FACTORY FUNCTION 
 function createCircle(radius) {
   return {
