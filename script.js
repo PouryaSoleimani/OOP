@@ -52,7 +52,7 @@ car1.move()
 // BOOLEAN
 // UNDEFINED
 // NULL
-// SYMBOL
+// SYMBOL1
 
 // $$___REFERENCE TYPES
 // ARRAYS
