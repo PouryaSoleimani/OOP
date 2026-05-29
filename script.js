@@ -41,12 +41,17 @@ function Car(name, speed) {
   this.maxSpeed = function () {
     console.log('MAXSPEED =>', this.speed)
   }
+  let calculateSpeed = function (speed) {
+    return Number(speed).toLocaleString()
+  }
+
   this.move = function () {
-    console.log(`MOVING AT ${speed}km/h`)
+    let _speed = calculateSpeed(this.speed)
+    console.log(`MOVING AT ${_speed}km/h`)
   }
 }
 
-const car1 = new Car("PORSCHE", 120)
+const car1 = new Car("PORSCHE", 190)
 car1.move()
 car1.maxSpeed()
 car1.model = 2024
