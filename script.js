@@ -8,7 +8,7 @@ const circle = {
     console.log('DRAW')
   }
 }
-
+// OBJECT FACTORY FUNCTION 
 function createCircle(radius) {
   return {
     radius: radius,
@@ -21,3 +21,4 @@ function createCircle(radius) {
 const circle2 = createCircle(1)
 const circle3 = createCircle(3)
 circle2.draw()
+      
