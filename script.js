@@ -38,6 +38,8 @@ let personObject = { firstName: 'mohammad', lastName: 'hashemi' }
 
 function Car(name, speed) {
   this.speed = speed
+  let bodyWeight = 500
+
   this.maxSpeed = function () {
     console.log('MAXSPEED =>', this.speed)
   }
@@ -49,6 +51,17 @@ function Car(name, speed) {
     let _speed = calculateSpeed(this.speed)
     console.log(`MOVING AT ${_speed}km/h`)
   }
+
+  // SETTER AND GETTER
+  Object.defineProperty(this, 'bodyWeight', {
+    get: function () {
+      return bodyWeight
+    },
+    set: function (w) {
+      if (w <= 0) throw new Error('INVALID NUMBER')
+      bodyWeight = w // dont use 'this' here
+    }
+  })
 }
 
 const car1 = new Car("PORSCHE", 190)
@@ -80,6 +93,9 @@ console.log('KEYS => ', keys)
 
 // 3 - IN
 if ('speed' in car1) console.log('SPEED IS IN CAR1')
+
+car1.bodyWeight = 600
+console.log('WEIGHT => ', car1.bodyWeight)
 
 
 // ---------------------------------------------------------------------------------------------------------
