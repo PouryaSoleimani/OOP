@@ -113,5 +113,54 @@ select {
   place-items: center;
   font-size: 100px;
   font-weight: bold;
-text-shadow: 3px 3px 10px black;
+  text-shadow: 3px 3px 10px black;
+}
+
+.bg__overlay {
+  position: relative;
+  background: url(/images/mountain.jpg) center/cover no-repeat;
+  height: 400px;
+  border-radius: 24px;
+  outline: 12px solid #ffffff30;
+  cursor: pointer;
+  border-radius: 24px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #00000095;
+  opacity: 1;
+  transition: all 700ms ease-in-out;
+  border-radius: 24px;
+}
+
+.left__side {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  border: 6px solid rgba(255, 255, 255, 0.316);
+  width: 100px;
+  height: 100px;
+  border-right: 0;
+  border-top: 0;
+  border-radius: 0 0 0 24px;
+}
+
+.right__side {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 6px solid rgba(255, 255, 255, 0.316);
+  width: 100px;
+  height: 100px;
+  border-bottom: 0;
+  border-left: 0;
+  border-radius: 0 24px 0 0;
+}
+
+.bg__overlay:hover {
+  .overlay {
+    opacity: 0;
+  }
 }
