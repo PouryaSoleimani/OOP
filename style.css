@@ -101,19 +101,22 @@ select {
   width: calc(100% - 128px);
   padding: calc(20px / 2);
   margin: 64px;
+  max-width: 100%;
 }
 
 .calc {
-  height: 400px;
+  height: auto;
   outline: 12px solid #ffffff30;
   background: linear-gradient(-45deg, #72c4e5 10%, #ede5ed, #e551ae);
   border-radius: 24px;
   margin: 32px auto;
   display: grid;
   place-items: center;
-  font-size: 100px;
+  font-size: calc(6vw - 10%);
   font-weight: bold;
   text-shadow: 3px 3px 10px black;
+  white-space: pre-wrap;
+  text-align: center;
 }
 
 .bg__overlay {
@@ -131,7 +134,7 @@ select {
   inset: 0;
   background-color: #00000095;
   opacity: 1;
-  transition: all 700ms ease-in-out;
+  transition: all 500ms ease-in-out;
   border-radius: 24px;
 }
 
@@ -162,5 +165,25 @@ select {
 .bg__overlay:hover {
   .overlay {
     opacity: 0;
+  }
+}
+
+
+.query__box {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto 32px auto;
+  border-radius: 24px;
+  outline: 10px solid #ffffff30;
+  background: linear-gradient(to bottom right, #84f2f6, #8afac6, #f4629f 80%);
+  transition: all 500ms ease;
+}
+
+
+@media (max-width:768px) {
+  .query__box {
+    width: 200px;
+    height: 200px;
+    border-radius: 16px;
   }
 }
