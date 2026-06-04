@@ -95,7 +95,7 @@ select {
   margin: 32px auto;
   border-radius: 24px;
   background: linear-gradient(to bottom, #610909 30%, #8a631a, #10265b);
-  outline: 12px solid #ffffff30;  
+  outline: 12px solid #ffffff30;
 }
 
 .inner__section {
@@ -180,7 +180,46 @@ select {
   transition: all 500ms ease;
 }
 
+.pseudo {
+  max-width: 100%;
 
+  padding: 8px 16px;
+  border-radius: 24px;
+  margin: 16px auto;
+  width: 500px;
+  text-align: justify;
+  border: 3px solid #ffffff30;
+
+  small {
+    white-space: normal;
+    display: block;
+    text-align: justify;
+    line-height: 1.95;
+    margin-bottom: 16px;
+
+    &::first-letter {
+      color: orange;
+      font-size: 3rem;
+      display: block;
+      padding: 4px;
+    }
+  }
+}
+
+
+
+.pseudo input::file-selector-button {
+  background-color: rgba(60, 160, 237, 0.911);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 32px;
+  color: white;
+}
+
+
+
+
+// RESPONSIVE ============================================================================================
 @media (max-width:768px) {
   .query__box {
     width: 200px;
