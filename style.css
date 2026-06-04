@@ -95,6 +95,7 @@ select {
   margin: 32px auto;
   border-radius: 24px;
   background: linear-gradient(to bottom, #610909 30%, #8a631a, #10265b);
+  outline: 12px solid #ffffff30;  
 }
 
 .inner__section {
