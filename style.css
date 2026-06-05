@@ -98,7 +98,12 @@ select {
   height: 300px;
   margin: 32px auto;
   border-radius: 24px;
-  background: linear-gradient(to bottom, #610909 30%, #8a631a, #10265b);
+  background: linear-gradient(
+    to bottom right,
+    #610909 20%,
+    #8a631a,
+    #10265b 70%
+  );
   outline: 12px solid #ffffff30;
 }
 
