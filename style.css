@@ -1,3 +1,7 @@
+:root {
+  --danger: #f54343;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -53,9 +57,9 @@ input {
   outline: none;
   border: none;
 
-  &[type='text'],
-  &[type='password'],
-  &[type='email'] {
+  &[type="text"],
+  &[type="password"],
+  &[type="email"] {
     width: 100%;
   }
 }
@@ -169,7 +173,6 @@ select {
   }
 }
 
-
 .query__box {
   width: 300px;
   height: 300px;
@@ -178,6 +181,12 @@ select {
   outline: 10px solid #ffffff30;
   background: linear-gradient(to bottom right, #84f2f6, #8afac6, #f4629f 80%);
   transition: all 500ms ease;
+}
+
+.query__box:hover {
+  /* // transform: translate3d(30px , 50px , 100px); */
+  transform: rotateX(15deg) rotateY(10deg) rotateZ(45deg);
+  /* // transform: scale(1.15);1100 */
 }
 
 .pseudo {
@@ -198,15 +207,13 @@ select {
     margin-bottom: 16px;
 
     &::first-letter {
-      color: orange;
+      color: var(--danger);
       font-size: 3rem;
       display: block;
       padding: 4px;
     }
   }
 }
-
-
 
 .pseudo input::file-selector-button {
   background-color: rgba(60, 160, 237, 0.911);
@@ -216,11 +223,8 @@ select {
   color: white;
 }
 
-
-
-
-// RESPONSIVE ============================================================================================
-@media (max-width:768px) {
+/* RESPONSIVE ============================================================================================ */
+@media (max-width: 768px) {
   .query__box {
     width: 200px;
     height: 200px;
