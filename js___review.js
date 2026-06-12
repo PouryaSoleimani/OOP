@@ -53,7 +53,15 @@ let firstnumber = +prompt("first number");
 let secondNumber = +prompt("secondNumber");
 
 let pow = 1;
-for (let i = 0; i < secondNumber; i++) {
-  console.log("REPEAT");
-  pow += firstnumber;
+
+// for (let i = 0; i < secondNumber; i++) {
+//   console.log("REPEAT");
+//   pow += firstnumber;
+// }
+
+let i = 0;
+while (i < secondNumber) {
+  pow = pow * firstnumber;
+  i++;
 }
+console.log("pow =>", pow);
