@@ -49,19 +49,28 @@
 //   sum.reduce((a, b) => a + b),
 // );
 
-let firstnumber = +prompt("first number");
-let secondNumber = +prompt("secondNumber");
+// let firstnumber = +prompt("first number");
+// let secondNumber = +prompt("secondNumber");
 
-let pow = 1;
+// let pow = 1;
 
 // for (let i = 0; i < secondNumber; i++) {
 //   console.log("REPEAT");
 //   pow += firstnumber;
 // }
 
-let i = 0;
-while (i < secondNumber) {
-  pow = pow * firstnumber;
-  i++;
-}
-console.log("pow =>", pow);
+// let i = 0;
+// while (i < secondNumber) {
+//   pow = pow * firstnumber;
+//   i++;
+// }
+
+// console.log("pow =>", pow);
+
+const users = ["amin", "mamad", "reza"];
+
+users.forEach((user, i) => {
+  console.log(`USER ${i + 1}. ${user}`);
+});
+
+console.log(users.includes("amin"));
