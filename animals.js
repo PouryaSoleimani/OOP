@@ -26,7 +26,7 @@ console.log(myDog.bark());
 
 class User {
   constructor(username, email) {
-    this.username = username; ف
+    this.username = username; 
     this.email = email;
   }
 
