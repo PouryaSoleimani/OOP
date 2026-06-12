@@ -74,3 +74,7 @@ users.forEach((user, i) => {
 });
 
 console.log(users.includes("amin"));
+
+users.splice(1, 0, "majid");
+
+console.log("users => ", users);
