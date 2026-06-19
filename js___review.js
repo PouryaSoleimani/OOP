@@ -78,4 +78,15 @@ console.log(users.includes("amin"));
 users.splice(1, 0, "majid");
 
 console.log("users => ", users);
-     
+
+const results = [12, 15, 18, 19, 29];
+
+const res = results.map((r) => {
+  return r * 2;
+});
+
+const usrname = "nima";
+const splitted = usrname.split("");
+const reversed = usrname.split("").reverse();
+
+console.log({ splitted, reversed });
