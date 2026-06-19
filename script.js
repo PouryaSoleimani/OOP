@@ -113,3 +113,5 @@ console.log("WEIGHT => ", car1.bodyWeight);
 // ARRAYS
 // OBJECTS
 // FUNCTIONS
+
+console.log("THIS IS THE END");
