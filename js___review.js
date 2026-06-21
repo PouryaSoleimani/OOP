@@ -90,3 +90,56 @@ const splitted = usrname.split("");
 const reversed = usrname.split("").reverse();
 
 console.log({ splitted, reversed });
+
+//^ MAKING CAPTCHAS
+const text = "123456790abcdefghijklmnopqrstuvwxyz";
+let char = Math.floor(Math.random() * text.length);
+let captcha = `
+${text[Math.floor(Math.random() * text.length)]} 
+${text[Math.floor(Math.random() * text.length)]} 
+${text[Math.floor(Math.random() * text.length)]} 
+${text[Math.floor(Math.random() * text.length)]} 
+${text[Math.floor(Math.random() * text.length)]} 
+${text[Math.floor(Math.random() * text.length)]} 
+${text[Math.floor(Math.random() * text.length)]} 
+${text[Math.floor(Math.random() * text.length)]}`
+  .replaceAll(" ", "")
+  .replaceAll("\n", "");
+console.log("CAPTCHA =>", captcha);
+
+let _captcha = "";
+let randomCharIndex;
+
+for (let i = 0; i < 7; i++) {
+  randomCharIndex = Math.floor(Math.random() * text.length);
+  _captcha += text[randomCharIndex];
+}
+//! NO NEED FOR REPLACE ALLS
+console.log("CAP =>", _captcha);
+
+const products = [
+  { id: 1, title: "LAPTOP", shortlink: "" },
+  { id: 2, title: "MOBILE", shortlink: "" },
+  { id: 3, title: "HEADPHONE", shortlink: "" },
+  { id: 4, title: "WATCH", shortlink: "" },
+];
+
+const finded = products.find((i) => i.shortlink === "assd012");
+console.log("finded =>", finded);
+
+const shortLinkAddedArray = products.map((p) => {
+  let captcha = `
+        ${text[Math.floor(Math.random() * text.length)]} 
+        ${text[Math.floor(Math.random() * text.length)]} 
+        ${text[Math.floor(Math.random() * text.length)]} 
+        ${text[Math.floor(Math.random() * text.length)]} 
+        ${text[Math.floor(Math.random() * text.length)]} 
+        ${text[Math.floor(Math.random() * text.length)]} 
+        ${text[Math.floor(Math.random() * text.length)]}
+        ${text[Math.floor(Math.random() * text.length)]}`
+    .replaceAll(" ", "")
+    .replaceAll("\n", "");
+  return { ...p, shortlink: captcha };
+});
+
+console.log(shortLinkAddedArray);
