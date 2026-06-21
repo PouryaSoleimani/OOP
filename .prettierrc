@@ -1,4 +1,9 @@
 {
   "printwidth": 400,
-  "semi": true
+  "semi": true,
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "bracketSameLine": true,
+  "experimentalOperatorPosition": "end",
+  "objectWrap": "collapse"
 }

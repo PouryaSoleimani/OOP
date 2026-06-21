@@ -65,8 +65,6 @@
 //   i++;
 // }
 
-// console.log("pow =>", pow);
-
 const users = ["amin", "mamad", "reza"];
 
 users.forEach((user, i) => {
@@ -143,3 +141,14 @@ const shortLinkAddedArray = products.map((p) => {
 });
 
 console.log(shortLinkAddedArray);
+
+function hasSSL(url) {
+  if (String(url).trim().includes("https")) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+const _res = hasSSL("https://google.com");
+console.log("res =>", _res);
