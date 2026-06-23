@@ -153,7 +153,7 @@ function hasSSL(url) {
 const _res = hasSSL("https://google.com");
 console.log("res =>", _res);
 
-// TIMER FUNCTION
+//^ TIMER FUNCTION
 let minute = 1
 let second = 10
 
@@ -165,20 +165,18 @@ function showTime(text) {
   }
 }
 
-let timer = setInterval(() => {
-  if (second == 0 && minute == 0) {
-    clearInterval(timer)
-    console.log('TIME UP !!')
-    return;
-  }
-  console.log(`TImer => ${showTime(minute)}:${showTime(second)}`)
-  second--
-  if (second < 0 && minute !== 0) {
-    minute--
-    second = 59
-  }
-}, 1000);
+// let timer = setInterval(() => {
+//   if (second == 0 && minute == 0) {
+//     clearInterval(timer)
+//     console.log('TIME UP !!')
+//     return;
+//   }
+//   console.log(`TImer => ${showTime(minute)}:${showTime(second)}`)
+//   second--
+//   if (second < 0 && minute !== 0) {
+//     minute--
+//     second = 59
+//   }
+// }, 1000);
 
 
-
-عمل جشم 
