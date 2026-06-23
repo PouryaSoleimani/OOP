@@ -179,4 +179,3 @@ function showTime(text) {
 //   }
 // }, 1000);
 
-
