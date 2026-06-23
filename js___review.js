@@ -152,3 +152,31 @@ function hasSSL(url) {
 
 const _res = hasSSL("https://google.com");
 console.log("res =>", _res);
+
+// TIMER FUNCTION
+let minute = 1
+let second = 10
+
+function showTime(text) {
+  if (String(text).length == 1) {
+    return `0${text}`
+  } else {
+    return text
+  }
+}
+
+let timer = setInterval(() => {
+  if (second == 0 && minute == 0) {
+    clearInterval(timer)
+    console.log('TIME UP !!')
+    return;
+  }
+  console.log(`TImer => ${showTime(minute)}:${showTime(second)}`)
+  second--
+  if (second < 0 && minute !== 0) {
+    minute--
+    second = 59
+  }
+}, 1000);
+
+
