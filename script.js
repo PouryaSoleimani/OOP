@@ -115,4 +115,8 @@ console.log("WEIGHT => ", car1.bodyWeight);
 // FUNCTIONS
 
 
-// DOM EVENTS 
+// DOM EVENTS
+// KEYDOWN / KEYPRESS / KEYUP
+// KEYUP => NO DELAY
+// KEYPRESS => NO ENTER || ALT || CRTL || ...
+// KEYDOWN => ONE STEP BEFORE 
