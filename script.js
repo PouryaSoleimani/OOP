@@ -114,5 +114,5 @@ console.log("WEIGHT => ", car1.bodyWeight);
 // OBJECTS
 // FUNCTIONS
 
-console.log("THIS IS THE END");
-console.log('this is the end ')
+
+// DOM EVENTS 
