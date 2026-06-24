@@ -274,6 +274,7 @@ select {
   position: fixed;
   top: 16px;
   left: 50%;
+  font-size: 32px;
   transform: translateX(-50%);
   font-weight: 700;
   text-align: center;
