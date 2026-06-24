@@ -263,6 +263,7 @@ select {
     }
   }
 }
+
 .sticky__navbar {
   width: 100%;
   margin-inline: auto;
@@ -318,6 +319,7 @@ select {
     top: 16px;
   }
 }
+
 /* RESPONSIVE ============================================================================================ */
 @media (max-width: 768px) {
   .query__box {
