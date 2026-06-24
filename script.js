@@ -129,3 +129,4 @@ console.log("WEIGHT => ", car1.bodyWeight);
 // WEATHER APP
 // FORM SUBMIT
 // EVENT.PREVENT DEFAULT()
+
