@@ -191,3 +191,5 @@ const goUpBtn = document.querySelector(".goUpBtn");
 goUpBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+// INSERTADJANCEHTML
