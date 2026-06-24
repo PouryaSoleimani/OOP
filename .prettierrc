@@ -1,6 +1,7 @@
 {
   "printwidth": 400,
   "semi": true,
+  "singleAttributePerLine": false,
   "arrowParens": "always",
   "bracketSpacing": true,
   "bracketSameLine": true,
