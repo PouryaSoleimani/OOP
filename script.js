@@ -146,3 +146,8 @@ el.lastChild;
 el.lastElementChild;
 el.hasChildNodes();
 
+// OnDblClick
+// OnSelect
+
+
+
