@@ -142,4 +142,7 @@ el.children;
 el.childElementCount;
 el.firstChild;
 el.firstElementChild;
+el.lastChild;
+el.lastElementChild;
+el.hasChildNodes();
 
