@@ -138,4 +138,8 @@ el.nextElementSibling;
 el.previousElementSibling;
 el.parentElement;
 el.nextSibling;
+el.children;
+el.childElementCount;
+el.firstChild;
+el.firstElementChild;
 
