@@ -146,8 +146,11 @@ el.lastChild;
 el.lastElementChild;
 el.hasChildNodes();
 
-// OnDblClick
-// OnSelect
+// ONSELECT
+// CANCELABLE
+// ONDBLCLICK
+
+
 
 
 
