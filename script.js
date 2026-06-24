@@ -127,3 +127,4 @@ console.log("WEIGHT => ", car1.bodyWeight);
 // ONVALUECHANGE => FOR SELECTBOXES
 // CELCUIS APP
 // WEATHER APP
+// FORM SUBMIT
