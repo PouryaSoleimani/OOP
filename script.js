@@ -194,3 +194,12 @@ goUpBtn.addEventListener("click", () => {
 
 // INSERTADJANCEHTML
 // MUSIC PLAYER PROJECT
+
+const playBtn = document.querySelector(".play__btn");
+playBtn.addEventListener("click", () => {
+  if (playBtn.firstElementChild.classList.contains("play")) {
+    playBtn.firstElementChild.className = "ph-fill ph-pause";
+  } else {
+    playBtn.firstElementChild.className = "ph-fill ph-play play";
+  }
+});
