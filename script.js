@@ -128,3 +128,4 @@ console.log("WEIGHT => ", car1.bodyWeight);
 // CELCUIS APP
 // WEATHER APP
 // FORM SUBMIT
+// EVENT.PREVENT DEFAULT()
