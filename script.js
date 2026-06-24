@@ -177,4 +177,3 @@ document.querySelectorAll(".context__btn").forEach((b) => {
 });
 
 console.log("THIS IS A LOG");
- 
