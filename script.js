@@ -148,6 +148,7 @@ el.hasChildNodes();
 
 // CONTEXT MENU
 const contextMenu = document.querySelector(".contextMenu");
+// open context menu
 document.body.addEventListener("contextmenu", (event) => {
   event.preventDefault();
   contextMenu.style.setProperty("opacity", "0");
@@ -159,9 +160,17 @@ document.body.addEventListener("contextmenu", (event) => {
     contextMenu.style.setProperty("top", `${y}px`);
   }, 200);
 });
+
+// PREVENT CLOSING
 document.body.addEventListener("click", (e) => {
   if (e.target.contains(contextMenu)) {
     return;
   }
   contextMenu.style.setProperty("opacity", "0");
+});
+
+document.querySelectorAll(".context__btn").forEach((b) => {
+  b.addEventListener("click", (e) => {
+    console.log("e =>", e.target.innerHTML);
+  });
 });
