@@ -204,5 +204,4 @@ playBtn.addEventListener("click", () => {
   }
 });
 
-
 // DRAG AND DROP
