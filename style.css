@@ -290,7 +290,7 @@ select {
     align-items: center;
     justify-content: center;
   }
-  
+
   .nav {
     display: flex;
     list-style: none;
@@ -311,6 +311,7 @@ select {
       color: var(--danger);
     }
   }
+
   &.scrolled {
     width: 90%;
     border-radius: 1000px;
