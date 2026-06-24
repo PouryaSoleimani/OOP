@@ -154,14 +154,14 @@ const _res = hasSSL("https://google.com");
 console.log("res =>", _res);
 
 //^ TIMER FUNCTION
-let minute = 1
-let second = 10
+let minute = 1;
+let second = 10;
 
 function showTime(text) {
   if (String(text).length == 1) {
-    return `0${text}`
+    return `0${text}`;
   } else {
-    return text
+    return text;
   }
 }
 
@@ -178,4 +178,3 @@ function showTime(text) {
 //     second = 59
 //   }
 // }, 1000);
-
