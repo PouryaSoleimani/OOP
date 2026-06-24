@@ -1,189 +1,199 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./fav.png" type="image/png" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="shortcut icon" href="./fav.png" type="image/png">
-  <title>Document</title>
-</head>
+  <body>
+    <div class="contextMenu">MENU</div>
+    <a href="#form" name="top">form</a>
 
-<body>
-  <a href="#form" name="top">form</a>
+    <img src="" alt="" usemap="#map" />
+    <map name="map">
+      <area shape="rect" coords="90,88,496,298" href="https://codeyad.com" />
+      <area shape="circle" coords="274,577,150" href="https://codeyad.com" />
+      <area
+        shape="poly"
+        coords="917,266,1072,547,764,546"
+        href="https://codeyad.com" />
+    </map>
 
-  <img src="" alt="" usemap="#map" />
-  <map name="map">
-    <area shape="rect" coords="90,88,496,298" href="https://codeyad.com" />
-    <area shape="circle" coords="274,577,150" href="https://codeyad.com" />
-    <area shape="poly" coords="917,266,1072,547,764,546" href="https://codeyad.com" />
-  </map>
-
-  <table>
-    <thead>
-      <tr>
-        <th colspan="2">INFOS</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td rowspan="2">POURYA</td>
-        <td rowspan="2">32</td>
-      </tr>
-      <tr></tr>
-    </tbody>
-  </table>
-
-  <ul>
-    <li>text</li>
-    <li>text</li>
-    <li>text</li>
-    <li>text</li>
-    <li>text</li>
-  </ul>
-
-  <dl>
-    <dt>POURYA</dt>
-    <dd>SOLEIMANI</dd>
-  </dl>
-
-  <a href="#top" name="form">top</a>
-
-  <!-- FORM -->
-  <fieldset>
-    <legend>فرم ثبت نام</legend>
-    <form>
-      <table width="750">
-
+    <table>
+      <thead>
         <tr>
-          <td width="150">نام کاربری :</td>
-          <td>
-            <input type="text" maxlength="10" size="20" placeholder="نام کاربری خود را وارد کنید" />
-          </td>
+          <th colspan="2">INFOS</th>
         </tr>
-
+      </thead>
+      <tbody>
         <tr>
-          <td width="150">رمز عبور :</td>
-          <td>
-            <input type="password" maxlength="10" size="20" placeholder="رمز عبور خود را وارد کنید" />
-          </td>
+          <td rowspan="2">POURYA</td>
+          <td rowspan="2">32</td>
         </tr>
+        <tr></tr>
+      </tbody>
+    </table>
 
-        <tr>
-          <td width="150">ایمیل :</td>
-          <td>
-            <input type="email" size="20" placeholder="ایمیل خود را وارد کنید" />
-          </td>
-        </tr>
+    <ul>
+      <li>text</li>
+      <li>text</li>
+      <li>text</li>
+      <li>text</li>
+      <li>text</li>
+    </ul>
 
-        <tr>
-          <td width="150" valign="top">آدرس :</td>
-          <td>
-            <textarea rows="10" cols="30"></textarea>
-          </td>
-        </tr>
+    <dl>
+      <dt>POURYA</dt>
+      <dd>SOLEIMANI</dd>
+    </dl>
 
-        <tr>
-          <td width="150" valign="top">جنسیت :</td>
-          <td>
-            <input class="fav" type="radio" name="milad" />مرد
-            <input class="fav" type="radio" name="milad" />زن
-          </td>
-        </tr>
+    <a href="#top" name="form">top</a>
 
-        <tr>
-          <td width="150" valign="top">شهر :</td>
-          <td>
-            <select>
-              <option>اصفهان</option>
-              <option>تهران</option>
-              <option selected>شیراز</option>
-              <option>تبریز</option>
-            </select>
-          </td>
-        </tr>
+    <!-- FORM -->
+    <fieldset>
+      <legend>فرم ثبت نام</legend>
+      <form>
+        <table width="750">
+          <tr>
+            <td width="150">نام کاربری :</td>
+            <td>
+              <input
+                type="text"
+                maxlength="10"
+                size="20"
+                placeholder="نام کاربری خود را وارد کنید" />
+            </td>
+          </tr>
 
-        <tr>
-          <td width="150" valign="top">استان :</td>
-          <td>
-            <select>
-              <optgroup label="استان 1">
-                <option>شهر 1</option>
-                <option>شهر 2</option>
-                <option>شهر 3</option>
-              </optgroup>
-              <optgroup label="استان 2">
-                <option>شهر 1</option>
-                <option>شهر 2</option>
-                <option>شهر 3</option>
-              </optgroup>
-            </select>
-          </td>
-        </tr>
+          <tr>
+            <td width="150">رمز عبور :</td>
+            <td>
+              <input
+                type="password"
+                maxlength="10"
+                size="20"
+                placeholder="رمز عبور خود را وارد کنید" />
+            </td>
+          </tr>
 
-        <tr>
-          <td width="150" valign="top">
-            <label>علاقه مندی ها</label>
-          </td>
-          <td>
-            <input class="fav" type="checkbox" checked />
-            <span>موزیک</span>
-            <input class="fav" type="checkbox" />
-            <span>سفر</span>
-            <input class="fav" type="checkbox" />
-            <span>ورزش</span>
-          </td>
-        </tr>
+          <tr>
+            <td width="150">ایمیل :</td>
+            <td>
+              <input
+                type="email"
+                size="20"
+                placeholder="ایمیل خود را وارد کنید" />
+            </td>
+          </tr>
 
-        <tr>
-          <td width="150" valign="top">فایل</td>
-          <td>
-            <input type="file" />
-          </td>
-        </tr>
+          <tr>
+            <td width="150" valign="top">آدرس :</td>
+            <td>
+              <textarea rows="10" cols="30"></textarea>
+            </td>
+          </tr>
 
-        <tr>
-          <td colspan="2" align="center">
-            <input type="submit" value="ثبت نام" />
-            <input type="reset" value="پاک کردن فرم" />
-          </td>
-        </tr>
+          <tr>
+            <td width="150" valign="top">جنسیت :</td>
+            <td>
+              <input class="fav" type="radio" name="milad" />مرد
+              <input class="fav" type="radio" name="milad" />زن
+            </td>
+          </tr>
 
-      </table>
-    </form>
-  </fieldset>
+          <tr>
+            <td width="150" valign="top">شهر :</td>
+            <td>
+              <select>
+                <option>اصفهان</option>
+                <option>تهران</option>
+                <option selected>شیراز</option>
+                <option>تبریز</option>
+              </select>
+            </td>
+          </tr>
 
+          <tr>
+            <td width="150" valign="top">استان :</td>
+            <td>
+              <select>
+                <optgroup label="استان 1">
+                  <option>شهر 1</option>
+                  <option>شهر 2</option>
+                  <option>شهر 3</option>
+                </optgroup>
+                <optgroup label="استان 2">
+                  <option>شهر 1</option>
+                  <option>شهر 2</option>
+                  <option>شهر 3</option>
+                </optgroup>
+              </select>
+            </td>
+          </tr>
 
-  <div class="gradient"></div>
+          <tr>
+            <td width="150" valign="top">
+              <label>علاقه مندی ها</label>
+            </td>
+            <td>
+              <input class="fav" type="checkbox" checked />
+              <span>موزیک</span>
+              <input class="fav" type="checkbox" />
+              <span>سفر</span>
+              <input class="fav" type="checkbox" />
+              <span>ورزش</span>
+            </td>
+          </tr>
 
-  <div class="calc inner__section">INNER SECTION</div>
+          <tr>
+            <td width="150" valign="top">فایل</td>
+            <td>
+              <input type="file" />
+            </td>
+          </tr>
 
-  <div class="bg__overlay inner__section">
-    <div class="overlay">
-      <div class="left__side"></div>
-      <div class="right__side"></div>
+          <tr>
+            <td colspan="2" align="center">
+              <input type="submit" value="ثبت نام" />
+              <input type="reset" value="پاک کردن فرم" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </fieldset>
+
+    <div class="gradient"></div>
+
+    <div class="calc inner__section">INNER SECTION</div>
+
+    <div class="bg__overlay inner__section">
+      <div class="overlay">
+        <div class="left__side"></div>
+        <div class="right__side"></div>
+      </div>
     </div>
-  </div>
 
-  <div class="query__box"></div>
+    <div class="query__box"></div>
 
-  <div class="pseudo">
-    <small>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus vero distinctio perspiciatis,
-      dolore quisquam commodi blanditiis facere ratione molestiae iusto repellendus veritatis ut voluptatibus itaque
-      illum
-      cum velit explicabo unde incidunt possimus cupiditate aut doloremque nulla. Voluptas voluptatum facilis ratione,
-      dolorum doloribus aut nisi ipsum asperiores explicabo, velit dolore consectetur.
-    </small>
-    <input type="file" name="" id="">
-  </div>
+    <div class="pseudo">
+      <small>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus vero
+        distinctio perspiciatis, dolore quisquam commodi blanditiis facere
+        ratione molestiae iusto repellendus veritatis ut voluptatibus itaque
+        illum cum velit explicabo unde incidunt possimus cupiditate aut
+        doloremque nulla. Voluptas voluptatum facilis ratione, dolorum doloribus
+        aut nisi ipsum asperiores explicabo, velit dolore consectetur.
+      </small>
+      <input type="file" name="" id="" />
+    </div>
 
-
-  <!--//^ SCRIPTS ----------------------------------------------------------------------------------------------------------------------------->
-  <script src="./script.js"></script>
-  <!-- <script src="./animals.js"></script> -->
-  <!-- <script src="./js___review.js"></script> -->
-  <!-- <script src="./js__training__2.js"></script> -->
-</body>
-
+    <!--//^ SCRIPTS ----------------------------------------------------------------------------------------------------------------------------->
+    <script src="./script.js"></script>
+    <!-- <script src="./animals.js"></script> -->
+    <!-- <script src="./js___review.js"></script> -->
+    <!-- <script src="./js__training__2.js"></script> -->
+  </body>
 </html>
