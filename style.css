@@ -375,7 +375,11 @@ select {
 }
 
 /*//^ DRAG AND DROP ============================================================================================*/
-
+.todos__title {
+  width: 90%;
+  margin: 24px auto;
+  font-weight: 800;
+}
 .draggables {
   padding: 32px;
   display: flex;
@@ -387,10 +391,12 @@ select {
   margin: auto;
   border-radius: 24px;
   height: auto;
+  position: relative;
+  height: 200px;
 }
 
 .draggable {
-  border: 4px solid #dfdfdf;
+  outline: 7px solid #dfdfdf50;
   font-size: 20px;
   font-weight: 800;
   width: fit-content;
@@ -419,8 +425,8 @@ select {
   position: relative;
   padding: 32px;
   display: flex;
+  flex-direction: column;
   gap: 32px;
-
   &::before {
     content: "DROP HERE";
     position: absolute;
@@ -440,6 +446,15 @@ select {
   opacity: 0.3;
   cursor: grabbing;
   border: 6px dashed #fff;
+}
+
+.all__tasks__done {
+  font-weight: 800;
+  font-size: 48px;
+  opacity: 0.2;
+  text-decoration: underline;
+  text-decoration-color: #8afac6;
+  text-decoration-thickness: 10px;
 }
 
 /*//^ RESPONSIVE ============================================================================================ */

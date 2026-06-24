@@ -208,6 +208,7 @@ playBtn.addEventListener("click", () => {
 
 const draggables = document.querySelectorAll(".draggable");
 const dropZone = document.querySelector(".dropBox");
+const draggablesDiv = document.querySelector(".draggables");
 
 draggables.forEach((d) => {
   d.addEventListener("dragstart", (e) => {
@@ -224,4 +225,19 @@ draggables.forEach((d) => {
 dropZone.addEventListener("dragover", () => {
   const draggedElement = document.querySelector(".dragging");
   dropZone.insertAdjacentElement("beforeend", draggedElement);
+  if (!draggablesDiv.children.length) {
+    setTimeout(() => {
+      console.log("ALL TASKS DONE");
+      draggablesDiv.innerHTML = `
+      <p class='all__tasks__done'>ALL TASKS DONE !</p>
+      `;
+    }, 400);
+  } else {
+    draggablesDiv.querySelector(".all__tasks__done")?.remove();
+  }
+});
+
+draggablesDiv.addEventListener("dragover", () => {
+  const draggedElement = document.querySelector(".dragging");
+  draggablesDiv.insertAdjacentElement("beforeend", draggedElement);
 });
