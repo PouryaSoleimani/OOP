@@ -1,10 +1,7 @@
 // LITERAL OBJECTS
 const circle = {
   radius: 1,
-  location: {
-    x: 1,
-    y: 1,
-  },
+  location: { x: 1, y: 1 },
   draw: function () {
     console.log("DRAW");
   },
@@ -114,7 +111,6 @@ console.log("WEIGHT => ", car1.bodyWeight);
 // OBJECTS
 // FUNCTIONS
 
-
 // DOM EVENTS
 // KEYDOWN / KEYPRESS / KEYUP
 // KEYUP => NO DELAY
@@ -132,7 +128,7 @@ console.log("WEIGHT => ", car1.bodyWeight);
 
 // ELEMENT NODE
 // DOM NAVIGATION
-const el = document.querySelector('.query__box')
+const el = document.querySelector(".query__box");
 
 el.nextElementSibling;
 el.previousElementSibling;
@@ -150,7 +146,22 @@ el.hasChildNodes();
 // CANCELABLE
 // ONDBLCLICK
 
-
-
-
-
+// CONTEXT MENU
+const contextMenu = document.querySelector(".contextMenu");
+document.body.addEventListener("contextmenu", (event) => {
+  event.preventDefault();
+  contextMenu.style.setProperty("opacity", "0");
+  const x = event.clientX - 10;
+  const y = event.clientY - 10;
+  setTimeout(() => {
+    contextMenu.style.setProperty("opacity", "1");
+    contextMenu.style.setProperty("left", `${x}px`);
+    contextMenu.style.setProperty("top", `${y}px`);
+  }, 200);
+});
+document.body.addEventListener("click", (e) => {
+  if (e.target.contains(contextMenu)) {
+    return;
+  }
+  contextMenu.style.setProperty("opacity", "0");
+});
