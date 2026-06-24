@@ -181,8 +181,8 @@ console.log("THIS IS A LOG");
 const stickyNavBar = document.querySelector(".sticky__navbar");
 document.addEventListener("scroll", () => {
   if (document.documentElement.scrollTop > 200) {
-    stickyNavBar.style.setProperty("opacity", 1);
+    stickyNavBar.classList.add("scrolled");
   } else {
-    stickyNavBar.style.setProperty("opacity", 0);
+    stickyNavBar.classList.remove("scrolled");
   }
 });
