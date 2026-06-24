@@ -130,3 +130,12 @@ console.log("WEIGHT => ", car1.bodyWeight);
 // FORM SUBMIT
 // EVENT.PREVENT DEFAULT()
 
+// ELEMENT NODE
+// DOM NAVIGATION
+const el = document.querySelector('.query__box')
+
+el.nextElementSibling;
+el.previousElementSibling;
+el.parentElement;
+el.nextSibling;
+
