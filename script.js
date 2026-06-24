@@ -186,3 +186,8 @@ document.addEventListener("scroll", () => {
     stickyNavBar.classList.remove("scrolled");
   }
 });
+
+const goUpBtn = document.querySelector(".goUpBtn");
+goUpBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});

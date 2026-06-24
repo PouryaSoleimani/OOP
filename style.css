@@ -20,6 +20,14 @@ body {
   white-space: nowrap;
 }
 
+button {
+  cursor: pointer;
+}
+
+button:active {
+  scale: 0.98;
+}
+
 table {
   outline: 8px solid #29292986;
   padding: 8px;
@@ -320,6 +328,13 @@ select {
   }
 }
 
+.goUpBtn {
+  background-color: orange;
+  font-size: 24px;
+  border-radius: 16px;
+  padding: 16px 32px;
+  font-weight: bolder;
+}
 /* RESPONSIVE ============================================================================================ */
 @media (max-width: 768px) {
   .query__box {
