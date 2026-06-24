@@ -263,7 +263,25 @@ select {
     }
   }
 }
-
+.sticky__navbar {
+  width: 90%;
+  margin-inline: auto;
+  background-color: #ffffff30;
+  backdrop-filter: blur(30px);
+  mix-blend-mode: difference;
+  border-radius: 1000px;
+  padding: 16px;
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  text-align: center;
+  z-index: 100;
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+  border: 1px solid #3f3e3e;
+}
 /* RESPONSIVE ============================================================================================ */
 @media (max-width: 768px) {
   .query__box {
