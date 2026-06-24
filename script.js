@@ -171,6 +171,7 @@ document.body.addEventListener("click", (e) => {
 
 document.querySelectorAll(".context__btn").forEach((b) => {
   b.addEventListener("click", (e) => {
+    e.preventDefault();
     console.log("e =>", e.target.innerHTML);
   });
 });
