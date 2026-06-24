@@ -332,9 +332,19 @@ select {
 .goUpBtn {
   background-color: orange;
   font-size: 24px;
-  border-radius: 16px;
-  padding: 16px 32px;
+  border-radius: 200px;
+  width: 50px;
+  height: 50px;
   font-weight: bolder;
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  i {
+    color: white;
+  }
 }
 
 .button__wrapper {
@@ -386,7 +396,7 @@ select {
   width: fit-content;
   padding: 16px 32px;
   border-radius: 16px;
-
+  height: fit-content;
   &.blue {
     background-color: cornflowerblue;
   }
@@ -407,6 +417,10 @@ select {
   height: 900px;
   border-radius: 16px;
   position: relative;
+  padding: 32px;
+  display: flex;
+  gap: 32px;
+
   &::before {
     content: "DROP HERE";
     position: absolute;
@@ -420,6 +434,12 @@ select {
     font-size: 64px;
     color: #ffffff30;
   }
+}
+
+.dragging {
+  opacity: 0.3;
+  cursor: grabbing;
+  border: 6px dashed #fff;
 }
 
 /*//^ RESPONSIVE ============================================================================================ */

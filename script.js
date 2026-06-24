@@ -205,3 +205,23 @@ playBtn.addEventListener("click", () => {
 });
 
 // DRAG AND DROP
+
+const draggables = document.querySelectorAll(".draggable");
+const dropZone = document.querySelector(".dropBox");
+
+draggables.forEach((d) => {
+  d.addEventListener("dragstart", (e) => {
+    e.currentTarget.classList.add("dragging");
+  });
+});
+
+draggables.forEach((d) => {
+  d.addEventListener("dragend", (e) => {
+    e.currentTarget.classList.remove("dragging");
+  });
+});
+
+dropZone.addEventListener("dragover", () => {
+  const draggedElement = document.querySelector(".dragging");
+  dropZone.insertAdjacentElement("beforeend", draggedElement);
+});
