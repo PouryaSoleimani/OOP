@@ -197,3 +197,9 @@ const pushBtn = document.querySelector('.push__btn')
 pushBtn.addEventListener('click', () => {
   location.replace('https://google.com')
 })
+
+// URL SEARCH PARAMS
+
+const search = new URLSearchParams(location.search).get('i')
+
+console.log('search ->', search)
