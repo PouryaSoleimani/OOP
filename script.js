@@ -204,7 +204,7 @@ playBtn.addEventListener("click", () => {
   }
 });
 
-// DRAG AND DROP
+//^ DRAG AND DROP
 const draggables = document.querySelectorAll(".draggable");
 const dropZone = document.querySelector(".dropBox");
 const draggablesDiv = document.querySelector(".draggables");
@@ -295,6 +295,7 @@ function checkAllTasksDone() {
 // LOCAL STORAGE
 // CSS VARIABLES
 
+// SPLIT
 const string = 'my name is pourya.'
 const chars = string.split('').filter((c) => {
   return c !== ' '
@@ -314,3 +315,5 @@ const outputResult = document.documentElement.addEventListener('keyup',(e) => {
   const result = e.getModifierState('CapsLock')
   console.log('result =>' , result)
 })
+
+console.log('I AM A DEVELOPER !')
