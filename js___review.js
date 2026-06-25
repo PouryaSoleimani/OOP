@@ -191,4 +191,4 @@ window.addEventListener('scroll', (e) => {
   customScrollBar.style.setProperty('width', `${percent}%`)
 })
 
-console.log(window.screen)
+console.log(window.screen) 
