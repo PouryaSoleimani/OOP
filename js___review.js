@@ -203,3 +203,14 @@ pushBtn.addEventListener('click', () => {
 const search = new URLSearchParams(location.search).get('i')
 
 console.log('search ->', search)
+
+
+const follower = document.querySelector('.mouse__follower')
+
+document.body.addEventListener('mousemove', (e) => {
+  const x = e.clientX
+  const y = e.clientY
+  console.log({ x, y })
+  follower.style.setProperty('left', `${x}px`)
+  follower.style.setProperty('top', `${y}px`)
+})

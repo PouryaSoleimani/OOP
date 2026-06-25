@@ -339,7 +339,7 @@ setInterval(() => {
   i++
 
   if (i == allSlides.length) {
-    i = 0;
+    i = 0; T
   }
 
 }, 4000);
