@@ -293,3 +293,4 @@ function checkAllTasksDone() {
 
 
 // LOCAL STORAGE
+// CSS VARIABLES
