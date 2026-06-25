@@ -308,12 +308,10 @@ const sentences = chars.filter((c) => {
 console.log('sentences =>', chars.length)
 
 const words = string.split(' ')
-console.log('words =>', words)
 
 
 const outputResult = document.documentElement.addEventListener('keyup', (e) => {
   const result = e.getModifierState('CapsLock')
-  console.log('result =>', result)
 })
 
 console.log('I AM A DEVELOPER !')
@@ -344,7 +342,6 @@ setInterval(() => {
     i = 0;
   }
 
-  console.log('i => ', i)
 }, 4000);
 
 const toast = document.querySelector('.toast')
