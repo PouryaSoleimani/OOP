@@ -294,3 +294,18 @@ function checkAllTasksDone() {
 
 // LOCAL STORAGE
 // CSS VARIABLES
+
+const string = 'my name is pourya.'
+const chars = string.split('').filter((c) => {
+  return c !== ' '
+})
+
+const sentences = chars.filter((c) => {
+  return c == '.'
+})
+
+console.log('sentences =>' , chars.length)
+
+const words = string.split(' ')
+console.log('words =>' , words)
+
