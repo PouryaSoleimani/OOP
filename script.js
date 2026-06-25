@@ -346,3 +346,33 @@ setInterval(() => {
 
   console.log('i => ', i)
 }, 4000);
+
+const toast = document.querySelector('.toast')
+
+function showToastHandler(mode) {
+  console.log('mode :', mode)
+  if (mode != 'error' && mode != 'success') {
+    console.warn('invalid mode for toast')
+    return;
+  }
+
+
+  requestAnimationFrame(() => {
+    toast.classList.add(mode)
+    toast.classList.add('show')
+    if (mode == 'success') {
+      toast.querySelector('.mode.success__mode').style.display = 'flex'
+    } else {
+      toast.querySelector('.mode.error__mode').style.display = 'flex'
+    }
+  })
+
+  setTimeout(() => {
+    toast.classList.remove('show')
+  }, (2500));
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  showToastHandler('success')
+})
