@@ -211,6 +211,14 @@ document.body.addEventListener('mousemove', (e) => {
   const x = e.clientX - (follower.clientWidth / 2)
   const y = e.clientY - (follower.clientHeight / 2.5)
   console.log({ x, y })
-  follower.style.setProperty('left', `${x}px`)
-  follower.style.setProperty('top', `${y}px`)
+  setTimeout(() => {
+    follower.style.setProperty('left', `${x}px`)
+    follower.style.setProperty('top', `${y}px`)
+  }, 150);
+
 })
+
+
+const userAgent = window.navigator
+
+console.log({ userAgent })
