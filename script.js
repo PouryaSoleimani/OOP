@@ -348,6 +348,7 @@ setInterval(() => {
 }, 4000);
 
 const toast = document.querySelector('.toast')
+const progress = document.querySelector('.progress')
 
 function showToastHandler(mode) {
   console.log('mode :', mode)
@@ -367,9 +368,20 @@ function showToastHandler(mode) {
     }
   })
 
-  setTimeout(() => {
-    toast.classList.remove('show')
-  }, (2500));
+  let percent = 0;
+
+  let percInterval = setInterval(() => {
+    progress.style.width = `${percent}%`
+    percent++
+    if (percent == 110) {
+      clearInterval(percInterval)
+      toast.classList.remove('show')
+      percent = 0
+      setTimeout(() => {
+        progress.style.width = `0%`
+      }, 200);
+    }
+  }, 50);
 }
 
 

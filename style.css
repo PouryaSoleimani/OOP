@@ -569,7 +569,6 @@ select {
   right: -400px;
   padding: 32px;
   border-radius: 12px;
-  border-bottom: 9px solid rgb(255, 255, 255);
   z-index: 200;
   background-color: rgb(19, 18, 18);
   width: 400px;
@@ -578,14 +577,32 @@ select {
   align-items: center;
   gap: 24px;
   transition: all 500ms ease;
+  overflow: hidden;
 
+  .progress {
+    width: 0;
+    position: absolute;
+    height: 6px;
+    top: 100%;
+    left: 0;
+    transition: all 400ms ease;
+    transform: translateY(-80%);
+  }
 
   &.success {
     border-color: #0feb84;
+
+    .progress {
+      background-color: #0feb84;
+    }
   }
 
   &.error {
     border-color: var(--danger);
+
+    .progress {
+      background-color: var(--danger);
+    }
   }
 
   .mode {
