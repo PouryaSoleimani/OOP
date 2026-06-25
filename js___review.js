@@ -195,5 +195,5 @@ window.addEventListener('scroll', (e) => {
 const pushBtn = document.querySelector('.push__btn')
 
 pushBtn.addEventListener('click', () => {
-  location.assign('https://google.com')
+  location.replace('https://google.com')
 })
