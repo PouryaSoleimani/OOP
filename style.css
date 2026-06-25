@@ -462,8 +462,6 @@ select {
   text-decoration-thickness: 10px;
 }
 
-
-
 .sliders___wrapper {
   display: flex;
   flex-direction: column;
@@ -550,7 +548,6 @@ select {
   }
 }
 
-
 .toast {
   position: fixed;
   top: 32px;
@@ -605,7 +602,6 @@ select {
     right: 32px
   }
 }
-
 
 /*//^ RESPONSIVE ============================================================================================ */
 @media (max-width: 768px) {
