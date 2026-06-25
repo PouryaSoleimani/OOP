@@ -373,6 +373,8 @@ function showToastHandler(mode) {
 }
 
 
-document.addEventListener('DOMContentLoaded', () => {
+const toastBtn = document.querySelector('.toast__btn')
+
+toastBtn.addEventListener('click', () => {
   showToastHandler('success')
 })

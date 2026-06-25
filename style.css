@@ -23,6 +23,21 @@ body {
 
 button {
   cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin: 8px;
+  transition: all 250ms ease-in-out;
+  font-size: 18px;
+  font-weight: 800;
+  outline: 8px solid #ffffff8c;
+  background-color: black;
+  color: white;
+
+  &:active {
+    scale: 0.90;
+  }
 }
 
 button:active {
@@ -601,6 +616,16 @@ select {
   &.show {
     right: 32px
   }
+}
+
+.toast__btn__wrapper {
+  display: flex;
+  justify-content: center;
+  padding-block: 64px;
+}
+
+.toast__btn {
+  margin-inline: auto;
 }
 
 /*//^ RESPONSIVE ============================================================================================ */
