@@ -218,7 +218,22 @@ document.body.addEventListener('mousemove', (e) => {
 
 })
 
+console.log({ nav: navigator.userAgentData.platform.toUpperCase() })
 
-const userAgent = window.navigator
+const isChrome = window.navigator.userAgent.includes('Chrome')
 
-console.log({ userAgent })
+const browserDetect = isChrome ? 'CHROME' : 'FIREFOX'
+
+console.log(`YOU ARE USING ${browserDetect}`)
+
+// CHECK INTERNET CONNECTION
+const offlineDiv = document.querySelector('.offline__mode')
+
+window.addEventListener('online', () => {
+  console.log('YOUR ARE ONLINE')
+})
+
+window.addEventListener('offline', () => {
+  console.log('offline')
+  document.body.classList.add('offline')
+})
