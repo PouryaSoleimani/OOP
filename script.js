@@ -310,3 +310,7 @@ const words = string.split(' ')
 console.log('words =>' , words)
 
  
+const outputResult = document.documentElement.addEventListener('keyup',(e) => {
+  const result = e.getModifierState('CapsLock')
+  console.log('result =>' , result)
+})
