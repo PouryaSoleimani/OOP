@@ -659,10 +659,10 @@ select {
   position: absolute;
   width: 80px;
   height: 80px;
-  background-color: rgba(255, 255, 0, 0.521);
+  background-color: rgba(231, 231, 231, 0.521);
   backdrop-filter: blur(3px);
   border-radius: 200px;
-}
+  z-index: -1;
 
 /*//^ RESPONSIVE ============================================================================================ */
 @media (max-width: 768px) {
