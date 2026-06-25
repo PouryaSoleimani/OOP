@@ -645,6 +645,15 @@ select {
   margin-inline: auto;
 }
 
+.custom__scroll {
+  position: fixed;
+  top: 0;
+  width: 0;
+  height: 9px;
+  background-color: #e551ae;
+  border-radius: 20px;
+}
+
 /*//^ RESPONSIVE ============================================================================================ */
 @media (max-width: 768px) {
   .query__box {

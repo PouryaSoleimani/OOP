@@ -178,3 +178,16 @@ function showTime(text) {
 //     second = 59
 //   }
 // }, 1000);
+
+
+const customScrollBar = document.querySelector('.custom__scroll')
+const height = window.innerHeight
+const scrollTop = document.documentElement.scrollTop
+
+
+window.addEventListener('scroll', (e) => {
+  let s = e.target.scrollingElement.scrollTop
+  let percent = ((s / height) * 100).toFixed(0) * 0.8
+  customScrollBar.style.setProperty('width', `${percent}%`)
+  console.log({ percent })
+})
