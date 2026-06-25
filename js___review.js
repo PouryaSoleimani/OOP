@@ -189,5 +189,6 @@ window.addEventListener('scroll', (e) => {
   let s = e.target.scrollingElement.scrollTop
   let percent = ((s / height) * 100).toFixed(0) * 0.8
   customScrollBar.style.setProperty('width', `${percent}%`)
-  console.log({ percent })
 })
+
+console.log(window.screen)
