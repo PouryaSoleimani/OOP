@@ -277,9 +277,7 @@ function getDragAfterElement(container, y) {
 }
 
 function checkAllTasksDone() {
-  const remainingTasks = draggablesDiv.querySelectorAll(
-    ".draggable:not(.dragging)",
-  );
+  const remainingTasks = draggablesDiv.children
 
   if (remainingTasks.length === 0) {
     if (!draggablesDiv.querySelector(".all__tasks__done")) {
@@ -292,3 +290,6 @@ function checkAllTasksDone() {
     draggablesDiv.querySelector(".all__tasks__done")?.remove();
   }
 }
+
+
+// LOCAL STORAGE
