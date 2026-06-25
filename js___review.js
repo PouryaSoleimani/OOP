@@ -1,10 +1,4 @@
-// console.log("JS");
-// const number = 10;
-// const number2 = 12;
-
-// let isEqual = number === number2;
-// console.log(isEqual);
-
+//^ FOR
 // let i = 0;
 // for (i; i <= 20; i++) {
 //   if (i % 2 == 0) {
@@ -12,17 +6,7 @@
 //   }
 // }
 
-// let firstNumber = +prompt("FIRST NUMBER");
-// let secondNumber = +prompt("SECOND NUMBER");
-
-// const min = Math.min(firstNumber, secondNumber);
-// const max = Math.max(firstNumber, secondNumber);
-
-// console.log({ firstNumber, secondNumber });
-
-// const isFirstOdd = firstNumber % 2 == 0;
-// if (!isFirstOdd) firstNumber++;
-
+//^ WHILE
 // if (firstNumber > secondNumber) {
 //   while (secondNumber <= firstNumber) {
 //     console.log(secondNumber);
@@ -35,135 +19,112 @@
 //   }
 // }
 
-// let userNumber;
-// let sum = [];
-
-// while (userNumber !== 0) {
-//   console.log("usernumber", userNumber);
-//   userNumber = +prompt("enter a number");
-//   sum.push(userNumber);
-// }
-
+//^ REDUCE
 // console.log(
 //   "sum",
 //   sum.reduce((a, b) => a + b),
 // );
 
-// let firstnumber = +prompt("first number");
-// let secondNumber = +prompt("secondNumber");
+//^ FOREACH
+// const users = ["amin", "mamad", "reza"];
 
-// let pow = 1;
+// users.forEach((user, i) => {
+//   console.log(`USER ${i + 1}. ${user}`);
+// });
 
-// for (let i = 0; i < secondNumber; i++) {
-//   console.log("REPEAT");
-//   pow += firstnumber;
+//^ INCLUDES
+// console.log(users.includes("amin"));
+
+//^ SPLICE
+// users.splice(1, 0, "majid");
+
+//^ MAP
+// const results = [12, 15, 18, 19, 29];
+
+// const res = results.map((r) => {
+//   return r * 2;
+// });
+
+//^ SPLIT
+// const usrname = "nima";
+// const splitted = usrname.split("");
+// const reversed = usrname.split("").reverse();
+// console.log({ splitted, reversed });
+
+
+//^ CAPTCHA
+// const text = "123456790abcdefghijklmnopqrstuvwxyz";
+// let char = Math.floor(Math.random() * text.length);
+// let captcha = `
+// ${text[Math.floor(Math.random() * text.length)]} 
+// ${text[Math.floor(Math.random() * text.length)]} 
+// ${text[Math.floor(Math.random() * text.length)]} 
+// ${text[Math.floor(Math.random() * text.length)]} 
+// ${text[Math.floor(Math.random() * text.length)]} 
+// ${text[Math.floor(Math.random() * text.length)]} 
+// ${text[Math.floor(Math.random() * text.length)]} 
+// ${text[Math.floor(Math.random() * text.length)]}`
+//   .replaceAll(" ", "")
+//   .replaceAll("\n", "");
+// console.log("CAPTCHA =>", captcha);
+
+// let _captcha = "";
+// let randomCharIndex;
+
+// for (let i = 0; i < 7; i++) {
+//   randomCharIndex = Math.floor(Math.random() * text.length);
+//   _captcha += text[randomCharIndex];
 // }
+// //! NO NEED FOR REPLACE ALLS
+// console.log("CAP =>", _captcha);
 
-// let i = 0;
-// while (i < secondNumber) {
-//   pow = pow * firstnumber;
-//   i++;
+//^ ARRAY METHODS
+// const products = [
+//   { id: 1, title: "LAPTOP", shortlink: "" },
+//   { id: 2, title: "MOBILE", shortlink: "" },
+//   { id: 3, title: "HEADPHONE", shortlink: "" },
+//   { id: 4, title: "WATCH", shortlink: "" },
+// ];
+
+// const finded = products.find((i) => i.shortlink === "assd012");
+
+// const shortLinkAddedArray = products.map((p) => {
+//   let captcha = `
+//         ${text[Math.floor(Math.random() * text.length)]} 
+//         ${text[Math.floor(Math.random() * text.length)]} 
+//         ${text[Math.floor(Math.random() * text.length)]} 
+//         ${text[Math.floor(Math.random() * text.length)]} 
+//         ${text[Math.floor(Math.random() * text.length)]} 
+//         ${text[Math.floor(Math.random() * text.length)]} 
+//         ${text[Math.floor(Math.random() * text.length)]}
+//         ${text[Math.floor(Math.random() * text.length)]}`
+//     .replaceAll(" ", "")
+//     .replaceAll("\n", "");
+//   return { ...p, shortlink: captcha };
+// });
+
+
+//^ STRING METHODS
+// function hasSSL(url) {
+//   if (String(url).trim().includes("https")) {
+//     return true;
+//   } else {
+//     return false;
+//   }
 // }
-
-const users = ["amin", "mamad", "reza"];
-
-users.forEach((user, i) => {
-  console.log(`USER ${i + 1}. ${user}`);
-});
-
-console.log(users.includes("amin"));
-
-users.splice(1, 0, "majid");
-
-console.log("users => ", users);
-
-const results = [12, 15, 18, 19, 29];
-
-const res = results.map((r) => {
-  return r * 2;
-});
-
-const usrname = "nima";
-const splitted = usrname.split("");
-const reversed = usrname.split("").reverse();
-
-console.log({ splitted, reversed });
-
-//^ MAKING CAPTCHAS
-const text = "123456790abcdefghijklmnopqrstuvwxyz";
-let char = Math.floor(Math.random() * text.length);
-let captcha = `
-${text[Math.floor(Math.random() * text.length)]} 
-${text[Math.floor(Math.random() * text.length)]} 
-${text[Math.floor(Math.random() * text.length)]} 
-${text[Math.floor(Math.random() * text.length)]} 
-${text[Math.floor(Math.random() * text.length)]} 
-${text[Math.floor(Math.random() * text.length)]} 
-${text[Math.floor(Math.random() * text.length)]} 
-${text[Math.floor(Math.random() * text.length)]}`
-  .replaceAll(" ", "")
-  .replaceAll("\n", "");
-console.log("CAPTCHA =>", captcha);
-
-let _captcha = "";
-let randomCharIndex;
-
-for (let i = 0; i < 7; i++) {
-  randomCharIndex = Math.floor(Math.random() * text.length);
-  _captcha += text[randomCharIndex];
-}
-//! NO NEED FOR REPLACE ALLS
-console.log("CAP =>", _captcha);
-
-const products = [
-  { id: 1, title: "LAPTOP", shortlink: "" },
-  { id: 2, title: "MOBILE", shortlink: "" },
-  { id: 3, title: "HEADPHONE", shortlink: "" },
-  { id: 4, title: "WATCH", shortlink: "" },
-];
-
-const finded = products.find((i) => i.shortlink === "assd012");
-console.log("finded =>", finded);
-
-const shortLinkAddedArray = products.map((p) => {
-  let captcha = `
-        ${text[Math.floor(Math.random() * text.length)]} 
-        ${text[Math.floor(Math.random() * text.length)]} 
-        ${text[Math.floor(Math.random() * text.length)]} 
-        ${text[Math.floor(Math.random() * text.length)]} 
-        ${text[Math.floor(Math.random() * text.length)]} 
-        ${text[Math.floor(Math.random() * text.length)]} 
-        ${text[Math.floor(Math.random() * text.length)]}
-        ${text[Math.floor(Math.random() * text.length)]}`
-    .replaceAll(" ", "")
-    .replaceAll("\n", "");
-  return { ...p, shortlink: captcha };
-});
-
-console.log(shortLinkAddedArray);
-
-function hasSSL(url) {
-  if (String(url).trim().includes("https")) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-const _res = hasSSL("https://google.com");
-console.log("res =>", _res);
+// const _res = hasSSL("https://google.com");
 
 //^ TIMER FUNCTION
-let minute = 1;
-let second = 10;
+// let minute = 1;
+// let second = 10;
 
-function showTime(text) {
-  if (String(text).length == 1) {
-    return `0${text}`;
-  } else {
-    return text;
-  }
-}
+// function showTime(text) {
+//   if (String(text).length == 1) {
+//     return `0${text}`;
+//   } else {
+//     return text;
+//   }
+// }
 
 // let timer = setInterval(() => {
 //   if (second == 0 && minute == 0) {
@@ -179,7 +140,7 @@ function showTime(text) {
 //   }
 // }, 1000);
 
-
+//^ CUSTOM SCROLL
 const customScrollBar = document.querySelector('.custom__scroll')
 const height = window.innerHeight
 const scrollTop = document.documentElement.scrollTop

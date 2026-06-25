@@ -655,7 +655,7 @@ select {
   top: 0;
   width: 0;
   height: 9px;
-  background-color: #e551ae;
+  background: linear-gradient(to right, violet, purple, orange, darkred);
   border-radius: 20px;
 }
 
@@ -686,6 +686,7 @@ select {
   font-size: 32px;
   z-index: 10;
   overflow: hidden;
+  display: none;
 
   i {
     transform: translateY(2px);
