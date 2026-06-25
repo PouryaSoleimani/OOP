@@ -384,7 +384,6 @@ function showToastHandler(mode) {
   }, 50);
 }
 
-
 const toastBtn = document.querySelector('.toast__btn')
 
 toastBtn.addEventListener('click', () => {
