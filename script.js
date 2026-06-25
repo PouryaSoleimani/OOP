@@ -262,16 +262,16 @@ draggablesDiv.addEventListener("dragover", (e) => {
 function getDragAfterElement(container, y) {
   const draggableElements = [...container.querySelectorAll(".draggable:not(.dragging)"),];
 
-  return draggableElements.reduce( (closest, child) => {
-      const box = child.getBoundingClientRect();
-      const offset = y - box.top - box.height / 2;
+  return draggableElements.reduce((closest, child) => {
+    const box = child.getBoundingClientRect();
+    const offset = y - box.top - box.height / 2;
 
-      if (offset < 0 && offset > closest.offset) {
-        return { offset: offset, element: child };
-      } else {
-        return closest;
-      }
-    },
+    if (offset < 0 && offset > closest.offset) {
+      return { offset: offset, element: child };
+    } else {
+      return closest;
+    }
+  },
     { offset: Number.NEGATIVE_INFINITY },
   ).element;
 }
@@ -305,15 +305,44 @@ const sentences = chars.filter((c) => {
   return c == '.'
 })
 
-console.log('sentences =>' , chars.length)
+console.log('sentences =>', chars.length)
 
 const words = string.split(' ')
-console.log('words =>' , words)
+console.log('words =>', words)
 
- 
-const outputResult = document.documentElement.addEventListener('keyup',(e) => {
+
+const outputResult = document.documentElement.addEventListener('keyup', (e) => {
   const result = e.getModifierState('CapsLock')
-  console.log('result =>' , result)
+  console.log('result =>', result)
 })
 
-console.log('I AM A DEVELOPER !') 
+console.log('I AM A DEVELOPER !')
+
+//^ IMAGES___SLIDER
+let i = 0
+const allSlides = document.querySelectorAll('.slide')
+
+function showSlide(i) {
+  allSlides.forEach(s => s.classList.remove('active'))
+  let current = allSlides[i]
+  current.classList.add('active')
+}
+
+function hideSlide(i) {
+  let current = allSlides[i]
+  current.classList.remove('active')
+}
+
+setInterval(() => {
+  showSlide(i)
+  setTimeout(() => {
+    hideSlide(i)
+  }, 2000);
+  i++
+
+  if (i == allSlides.length) {
+    i = 0;
+  }
+
+  console.log('i => ', i)
+}, 4000);
