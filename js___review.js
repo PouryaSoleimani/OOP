@@ -171,7 +171,6 @@ const follower = document.querySelector('.mouse__follower')
 document.body.addEventListener('mousemove', (e) => {
   const x = e.clientX - (follower.clientWidth / 2)
   const y = e.clientY - (follower.clientHeight / 2.5)
-  console.log({ x, y })
   setTimeout(() => {
     follower.style.setProperty('left', `${x}px`)
     follower.style.setProperty('top', `${y}px`)
