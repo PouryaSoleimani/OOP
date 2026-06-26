@@ -194,6 +194,9 @@ window.addEventListener('online', () => {
 })
 
 window.addEventListener('offline', () => {
+  import React from "react";
   console.log('offline')
   document.body.classList.add('offline')
 })
+
+// 1995 => BRENDEN EICH
