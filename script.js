@@ -382,3 +382,16 @@ const toastBtn = document.querySelector('.toast__btn')
 toastBtn.addEventListener('click', () => {
   showToastHandler('success')
 })
+
+
+const next = document.querySelector('.next')
+const prev = document.querySelector('.prev')
+
+next.addEventListener('click', () => {
+  i += 1
+})
+
+prev.addEventListener('click', () => {
+  i -= 1
+})
+
