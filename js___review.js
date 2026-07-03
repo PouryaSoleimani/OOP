@@ -159,15 +159,12 @@ pushBtn.addEventListener('click', () => {
   location.replace('https://google.com')
 })
 
-// URL SEARCH PARAMS
-
+//^ URL SEARCH PARAMS
 const search = new URLSearchParams(location.search).get('i')
-
 console.log('search ->', search)
 
-
+//^ MOUSE FOLLOWER
 const follower = document.querySelector('.mouse__follower')
-
 document.body.addEventListener('mousemove', (e) => {
   const x = e.clientX - (follower.clientWidth / 2)
   const y = e.clientY - (follower.clientHeight / 2.5)
@@ -178,25 +175,25 @@ document.body.addEventListener('mousemove', (e) => {
 
 })
 
+//^ WINDOW.NAVIGATOR
 console.log({ nav: navigator.userAgentData.platform.toUpperCase() })
-
 const isChrome = window.navigator.userAgent.includes('Chrome')
-
 const browserDetect = isChrome ? 'CHROME' : 'FIREFOX'
-
 console.log(`YOU ARE USING ${browserDetect}`)
 
-// CHECK INTERNET CONNECTION
+//^ CHECK INTERNET CONNECTION STATUS + ONLINE MODE / OFFLINE MODE
 const offlineDiv = document.querySelector('.offline__mode')
-
 window.addEventListener('online', () => {
   console.log('YOUR ARE ONLINE')
 })
-
 window.addEventListener('offline', () => {
   console.log('offline')
   document.body.classList.add('offline')
 })
 
-// 1995 => BRENDEN EICH
+//^ JS HISTORY
+// 1995 => BRENDEN EICH => MOCHA => JAVASCRIPT => ECMASCRIPT => ES6 => ...
+
+
+
 
