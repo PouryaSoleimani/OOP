@@ -288,7 +288,7 @@ function checkAllTasksDone() {
 }
 
 
-//^ LOCAL STORAGE
+//^ LOCAL STORAGE  
 //^ CSS VARIABLES
 
 //^ SPLIT
@@ -395,3 +395,7 @@ prev.addEventListener('click', () => {
   i -= 1
 })
 
+
+
+// شماره برای آیفون 13 پرومکس اشتراکی
+// ۰۹۹۰۱۹۱۹۴۷۵
