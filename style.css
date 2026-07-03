@@ -269,27 +269,7 @@ select {
   transition: opacity 200ms ease;
   display: flex;
   flex-direction: column;
-
-  .context__btn {
-    width: 100%;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    padding: 8px 4px;
-    color: white;
-    font-family: "JetBrains Mono";
-    font-size: 16px;
-    text-align: start;
-    margin-block: 8px;
-    transition: all 300ms ease;
-    border-radius: 4px;
-    font-weight: bolder;
-
-    &:hover {
-      background-color: #a5a0a0;
-      color: black;
-    }
-  }
+  gap: 8px;
 }
 
 .sticky__navbar {
