@@ -11,6 +11,7 @@ body {
   background-color: black;
   color: white;
   padding-top: 100px;
+  overflow-x: hidden;
 
   &.offline {
     max-height: 100dvh;
