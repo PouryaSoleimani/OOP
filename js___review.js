@@ -241,7 +241,31 @@ function addBook(cb) {
 addBook(booksLogger)
 
 
-//^ PROMISES
+// EXAMPLE 2 
+
+const cars = [
+  { id: 1, title: 'car1', price: 500_000_000 },
+  { id: 2, title: 'car2', price: 350_000_000 },
+  { id: 3, title: 'car3', price: 250_000_000 }
+]
+
+const newCar = { id: 4, title: 'car4', price: 450_000_00 }
+
+function carLogger() {
+  console.log('cars =>', cars)
+}
+
+function addCar(newCar, callback) {
+  setTimeout(() => {
+    cars.push(newCar)
+    callback()
+  }, 3000);
+}
+
+addCar(newCar, carLogger)
+
+
+//^ PROMISES =======================================================================================================
 const products = [
   { id: 1, title: 'product 1', price: 2_000_000 },
   { id: 2, title: 'product 2', price: 3_000_000 },
@@ -254,10 +278,10 @@ const newProduct = { id: 4, title: 'product 4', price: 5_000_000 }
 const productAdder = new Promise((resolve, reject) => {
   if (2 == 2) {
     setTimeout(() => {
-      console.log('%c RESOLVED', 'color:limegreen')
+      console.log('%c PROMISE RESOLVED', 'color:limegreen')
     }, 3000);
   } else {
-    reject('REJECTED')
+    reject('PROMISE REJECTED')
   }
 })
 
