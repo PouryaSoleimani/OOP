@@ -197,3 +197,15 @@ window.addEventListener('offline', () => {
 
 
 
+function callbackHandler() {
+  console.log("CALLBACK")
+}
+
+function parent(text, callback) {
+  setTimeout(() => {
+    console.log('text =>', text)
+    callback()
+  }, 2000);
+}
+
+parent('AEROX', callbackHandler)
