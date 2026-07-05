@@ -297,7 +297,7 @@ const productsWrapper = document.querySelector('.products')
 const productsFetcher = new Promise((resolve, rej) => {
   const res = fetch('https://fakestoreapi.com/products')
     .then(response => response.json())
-    .then(data => console.log('PROMISE RESOLVED ->', data));
+    .then(data => data);
   if (res) {
     resolve(res)
   } else {
@@ -307,12 +307,12 @@ const productsFetcher = new Promise((resolve, rej) => {
 
 productsFetcher
   .then(response => {
-    console.log(response)
-    // const html = []
-    // response.forEach(element => {
-    //   const _html = ` <p>${element.title}</p> `
-    //   html.push(_html)
-    // });
-    // productsWrapper.innerHTML = html.join('')
+    console.log('res =>', response)
+    const html = []
+    response.forEach(element => {
+      const _html = ` <p>${element.id}. ${element.title.slice(0, 20)}</p> `
+      html.push(_html)
+    });
+    productsWrapper.innerHTML = html.join('')
   })
   .catch(err => console.error('promise error => ', err.message))

@@ -640,7 +640,6 @@ select {
   border-radius: 20px;
 }
 
-
 .mouse__follower {
   position: absolute;
   width: 80px;
@@ -694,6 +693,9 @@ select {
   border-radius: 24px;
   padding: 32px;
   outline: 6px solid #ffffff50;
+  width: 90%;
+  background-color: #202020;
+  margin: 40px auto;
 }
 
 .product {
