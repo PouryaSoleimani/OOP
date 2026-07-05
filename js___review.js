@@ -196,16 +196,71 @@ window.addEventListener('offline', () => {
 
 
 
-
+//^ CALLBACKS
 function callbackHandler() {
   console.log("CALLBACK")
 }
 
 function parent(text, callback) {
   setTimeout(() => {
-    console.log('text =>', text)
+    console.log('TEXT =>', text)
     callback()
   }, 2000);
 }
 
 parent('AEROX', callbackHandler)
+
+
+// EXAMPLE CALLBACK FUNCTIONS
+const books = [
+  { id: 1, title: 'book1', price: 200_000 },
+  { id: 2, title: 'book2', price: 150_000 },
+  { id: 3, title: 'book3', price: 250_000 },
+]
+
+function booksLogger() {
+  console.log(
+    `%c UPDATED LOG =>`,
+    'color:black ; background-color:white; padding:4px 8px; border-radius:8px;font-weight:800;',
+    books)
+}
+
+function addBook(cb) {
+  const newBook = {
+    id: books.length + 1,
+    title: 'book4',
+    price: 300_000
+  }
+  setTimeout(() => {
+    books.push(newBook)
+    cb()
+  }, 4000);
+
+}
+
+addBook(booksLogger)
+
+
+//^ PROMISES
+const products = [
+  { id: 1, title: 'product 1', price: 2_000_000 },
+  { id: 2, title: 'product 2', price: 3_000_000 },
+  { id: 3, title: 'product 3', price: 4_000_000 },
+]
+
+const newProduct = { id: 4, title: 'product 4', price: 5_000_000 }
+
+
+const productAdder = new Promise((resolve, reject) => {
+  if (2 == 2) {
+    setTimeout(() => {
+      console.log('%c RESOLVED', 'color:limegreen')
+    }, 3000);
+  } else {
+    reject('REJECTED')
+  }
+})
+
+productAdder
+  .then(res => res)
+  .catch(err => console.log("%c ERROR =>", 'background-color: red;padding: 4px;', err))
