@@ -288,3 +288,8 @@ const productAdder = new Promise((resolve, reject) => {
 productAdder
   .then(res => res)
   .catch(err => console.log("%c ERROR =>", 'background-color: red;padding: 4px;', err))
+
+
+const filteredCars = cars.filter(car => car.price <= 350_000_000)
+
+console.log('filtered Cars =>', filteredCars)
