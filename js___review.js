@@ -263,7 +263,8 @@ function addCar(newCar, callback) {
 }
 
 addCar(newCar, carLogger)
-
+const filteredCars = cars.filter(car => car.price <= 350_000_000)
+console.log('filtered Cars =>', filteredCars)
 
 //^ PROMISES =======================================================================================================
 const products = [
@@ -279,6 +280,7 @@ const productAdder = new Promise((resolve, reject) => {
   if (2 == 2) {
     setTimeout(() => {
       console.log('%c PROMISE RESOLVED', 'color:limegreen')
+      resolve()
     }, 3000);
   } else {
     reject('PROMISE REJECTED')
@@ -290,6 +292,27 @@ productAdder
   .catch(err => console.log("%c ERROR =>", 'background-color: red;padding: 4px;', err))
 
 
-const filteredCars = cars.filter(car => car.price <= 350_000_000)
+const productsWrapper = document.querySelector('.products')
 
-console.log('filtered Cars =>', filteredCars)
+const productsFetcher = new Promise((resolve, rej) => {
+  const res = fetch('https://fakestoreapi.com/products')
+    .then(response => response.json())
+    .then(data => console.log('PROMISE RESOLVED ->', data));
+  if (res) {
+    resolve(res)
+  } else {
+    reject('NO RESPONSE')
+  }
+})
+
+productsFetcher
+  .then(response => {
+    console.log(response)
+    // const html = []
+    // response.forEach(element => {
+    //   const _html = ` <p>${element.title}</p> `
+    //   html.push(_html)
+    // });
+    // productsWrapper.innerHTML = html.join('')
+  })
+  .catch(err => console.error('promise error => ', err.message))

@@ -686,6 +686,34 @@ select {
   }
 }
 
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 24px;
+  padding: 32px;
+  outline: 6px solid #ffffff50;
+}
+
+.product {
+  display: flex;
+  border: 2px solid #ffffff90;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/*//^ RESPONSIVE ============================================================================================ */
+@media (max-width: 768px) {
+  .query__box {
+    width: 200px;
+    height: 200px;
+    border-radius: 16px;
+  }
+}
+
+
+/*//^ KEYFRAMES ============================================================================================ */
 @keyframes pulse {
   0% {
     transform: scale(0.9);
@@ -697,14 +725,5 @@ select {
 
   100% {
     transform: scale(0.9);
-  }
-}
-
-/*//^ RESPONSIVE ============================================================================================ */
-@media (max-width: 768px) {
-  .query__box {
-    width: 200px;
-    height: 200px;
-    border-radius: 16px;
   }
 }
