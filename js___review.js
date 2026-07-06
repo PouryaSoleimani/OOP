@@ -286,7 +286,7 @@ const productAdder = new Promise((resolve, reject) => {
 productAdder
   .then(res => res)
   .catch(err => console.log("%c ERROR =>", 'background-color: red;padding: 4px;', err))
-
+  .finally(console.log('FINALLY'))
 
 const productsWrapper = document.querySelector('.products')
 
@@ -301,7 +301,7 @@ const productsFetcher = new Promise((resolve, reject) => {
   }
 })
 
-// INJECT FETCHED PRODUCTS
+// INJECT FETCHED PRODUCTSz
 productsFetcher
   .then(response => {
     console.log('res =>', response)
