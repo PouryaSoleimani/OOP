@@ -290,7 +290,7 @@ productAdder
 
 const productsWrapper = document.querySelector('.products')
 
-const productsFetcher = new Promise((resolve, rej) => {
+const productsFetcher = new Promise((resolve, reject) => {
   const res = fetch('https://fakestoreapi.com/products')
     .then(response => response.json())
     .then(data => data);
