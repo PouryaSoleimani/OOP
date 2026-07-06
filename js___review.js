@@ -318,4 +318,3 @@ productsFetcher
   .catch(err => console.error('promise error => ', err.message))
 
 
-  
