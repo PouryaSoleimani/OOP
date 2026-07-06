@@ -208,10 +208,9 @@ function parent(text, callback) {
   }, 2000);
 }
 
-parent('AEROX', callbackHandler)
+parent('IPHONE 16PROMAX TITANIUM BLACK', callbackHandler)
 
-
-// EXAMPLE CALLBACK FUNCTIONS
+// EXAMPLE CALLBACK FUNCTIONS =====================================================================================================================
 const books = [
   { id: 1, title: 'book1', price: 200_000 },
   { id: 2, title: 'book2', price: 150_000 },
