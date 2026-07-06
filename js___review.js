@@ -316,3 +316,6 @@ productsFetcher
     productsWrapper.innerHTML = html.join('')
   })
   .catch(err => console.error('promise error => ', err.message))
+
+
+  
