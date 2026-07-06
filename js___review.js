@@ -234,21 +234,18 @@ function addBook(cb) {
     books.push(newBook)
     cb()
   }, 4000);
-
 }
 
 addBook(booksLogger)
 
-
-// EXAMPLE 2 
-
+// EXAMPLE 2 =====================================================================================================================
 const cars = [
   { id: 1, title: 'car1', price: 500_000_000 },
   { id: 2, title: 'car2', price: 350_000_000 },
   { id: 3, title: 'car3', price: 250_000_000 }
 ]
 
-const newCar = { id: 4, title: 'car4', price: 450_000_00 }
+const newCar = { id: 4, title: 'car4', price: 450_000_000 }
 
 function carLogger() {
   console.log('cars =>', cars)
@@ -262,6 +259,7 @@ function addCar(newCar, callback) {
 }
 
 addCar(newCar, carLogger)
+
 const filteredCars = cars.filter(car => car.price <= 350_000_000)
 console.log('filtered Cars =>', filteredCars)
 
@@ -273,7 +271,6 @@ const products = [
 ]
 
 const newProduct = { id: 4, title: 'product 4', price: 5_000_000 }
-
 
 const productAdder = new Promise((resolve, reject) => {
   if (2 == 2) {
@@ -304,6 +301,7 @@ const productsFetcher = new Promise((resolve, rej) => {
   }
 })
 
+// INJECT FETCHED PRODUCTS
 productsFetcher
   .then(response => {
     console.log('res =>', response)
