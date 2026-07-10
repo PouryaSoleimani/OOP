@@ -356,7 +356,19 @@ document.addEventListener('DOMContentLoaded', () => {
 //^ FETCH API
 
 let _data = []
+let _product = {}
+const singleProductDiv = document.querySelector('.single__product')
 
 fetch('https://fakestoreapi.com/products')
   .then(response => response.json())
-  .then(data => { _data = data; console.log("_data", _data) })
+  .then(data => {
+    _data = data;
+    console.log("_data", _data)
+    _product = data[Math.floor(Math.random() * 20)]
+    console.log('product => ', _product)
+    singleProductDiv.innerHTML = `
+    <p class='bg-transparent'>${_product.id}. ${_product.title}</p>
+    `
+  })
+
+
