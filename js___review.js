@@ -345,8 +345,11 @@ const loadCssFiles = () => {
     const tailwindScriptTag = document.createElement('script')
     tailwindScriptTag.src = "https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
     document.body.insertAdjacentElement('beforeend', tailwindScriptTag)
-    console.log('script injected')
+    resolve("script injected")
   })
 }
 
-document.addEventListener('DOMContentLoaded', loadCssFiles)
+document.addEventListener('DOMContentLoaded', () => {
+  loadCssFiles().then(res => console.log('res =>', res.toUpperCase()))
+})
+
