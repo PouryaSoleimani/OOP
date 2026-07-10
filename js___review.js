@@ -337,4 +337,16 @@ myPromise
   })
   .then(res => console.log('3rd THEN =>', res))
   .catch(err => console.log('🟥 PROMISE REJECTED =>', err))
-  .finally(console.log('🟨 PROMISE FINALLY')) 
+  .finally(console.log('🟨 PROMISE FINALLY'))
+
+// LOAD CDN WITH PROMISES
+const loadCssFiles = () => {
+  return new Promise((resolve, reject) => {
+    const tailwindScriptTag = document.createElement('script')
+    tailwindScriptTag.src = "https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
+    document.body.insertAdjacentElement('beforeend', tailwindScriptTag)
+    console.log('script injected')
+  })
+}
+
+document.addEventListener('DOMContentLoaded', loadCssFiles)
