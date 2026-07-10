@@ -705,6 +705,20 @@ select {
   border-radius: 8px;
 }
 
+.product__item {
+  background-color: #2e2e2e;
+  width: fit-content;
+  padding: 8px 16px;
+  border-radius: 8px;
+  outline: 2px solid #ffffff50;
+  transition: all 500ms cubic-bezier(0.23, 1, 0.320, 1);
+  cursor: pointer;
+
+  &:hover {
+    background-color: black;
+  }
+}
+
 /*//^ RESPONSIVE ============================================================================================ */
 @media (max-width: 768px) {
   .query__box {

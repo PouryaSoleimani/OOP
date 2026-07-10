@@ -144,6 +144,8 @@
 // ONDBLCLICK
 
 //^ CONTEXT MENU
+
+
 const contextMenu = document.querySelector(".contextMenu");
 // open context menu
 document.body.addEventListener("contextmenu", (event) => {

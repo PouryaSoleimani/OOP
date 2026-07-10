@@ -301,17 +301,18 @@ const productsFetcher = new Promise((resolve, reject) => {
   }
 })
 
-// INJECT FETCHED PRODUCTSz
+// INJECT FETCHED PRODUCTS
 productsFetcher
   .then(response => {
-    console.log('res =>', response)
+    console.log('fetch response =>', response)
     const html = []
     response.forEach(element => {
-      const _html = ` <p>${element.id}. ${element.title.slice(0, 20)}</p> `
+      const _html = ` <p class="product__item">${element.id}. ${element.title.slice(0, 20)}</p> `
       html.push(_html)
     });
     productsWrapper.innerHTML = html.join('')
   })
   .catch(err => console.error('promise error => ', err.message))
+
 
 
