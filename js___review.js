@@ -353,3 +353,10 @@ document.addEventListener('DOMContentLoaded', () => {
   loadCssFiles().then(res => console.log('res =>', res.toUpperCase()))
 })
 
+//^ FETCH API
+
+let _data = []
+
+fetch('https://fakestoreapi.com/products')
+  .then(response => response.json())
+  .then(data => { _data = data; console.log("_data", _data) })
