@@ -327,5 +327,6 @@ const myPromise = new Promise((resolve, reject) => {
 })
 
 myPromise
-  .then(res => console.log('promise res =>', res))
-  .catch(err => console.log('promise reject =>', err))
+  .then(res => console.log('🟩 PROMISE RESOLVED =>', res))
+  .catch(err => console.log('🟥 PROMISE REJECTED =>', err))
+  .finally(console.log('🟨 PROMISE FINALLY')) 
