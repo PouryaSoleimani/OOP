@@ -208,7 +208,7 @@ function parent(text, callback) {
   }, 2000);
 }
 
-parent('IPHONE 16PROMAX TITANIUM BLACK', callbackHandler)
+parent('IPHONE 17PROMAX SILVER', callbackHandler)
 
 // EXAMPLE CALLBACK FUNCTIONS =====================================================================================================================
 const books = [
