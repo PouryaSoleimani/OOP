@@ -370,5 +370,3 @@ fetch('https://fakestoreapi.com/products')
     <p class='bg-transparent'>${_product.id}. ${_product.title}</p>
     `
   })
-
-
