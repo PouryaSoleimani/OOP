@@ -316,3 +316,16 @@ productsFetcher
 
 
 
+// PROMISE EXAMPLE 
+let isLoggedIn = true
+const myPromise = new Promise((resolve, reject) => {
+  if (isLoggedIn) {
+    resolve('PROMISE RESOLVED')
+  } else {
+    reject('PROMISE REJECTED')
+  }
+})
+
+myPromise
+  .then(res => console.log('promise res =>', res))
+  .catch(err => console.log('promise reject =>', err))
