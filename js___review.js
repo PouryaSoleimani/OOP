@@ -331,6 +331,10 @@ myPromise
   .then(res => {
     console.log('🟩 PROMISE RESOLVED =>', res.toUpperCase()); return res.toUpperCase()
   })
-  .then(res => console.log('2nd THEN =>', res))
+  .then(res => {
+    console.log('2nd THEN =>', res);
+    return res.concat('!')
+  })
+  .then(res => console.log('3rd THEN =>', res))
   .catch(err => console.log('🟥 PROMISE REJECTED =>', err))
   .finally(console.log('🟨 PROMISE FINALLY')) 
