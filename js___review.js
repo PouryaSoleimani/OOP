@@ -141,6 +141,8 @@
 // }, 1000);
 
 //^ CUSTOM SCROLL
+
+
 const customScrollBar = document.querySelector('.custom__scroll')
 const height = window.innerHeight
 const scrollTop = document.documentElement.scrollTop
