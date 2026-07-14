@@ -359,7 +359,16 @@ let _data = []
 let _product = {}
 const singleProductDiv = document.querySelector('.single__product')
 
-fetch('https://fakestoreapi.com/products')
+fetch('https://fakestoreapi.com/products', {
+  method: "POST",
+  headers: {
+    'content-type': 'application/json'
+  },
+  body: {
+    title: 'title',
+    price: 'price'
+  }
+})
   .then(response => response.json())
   .then(data => {
     _data = data;
