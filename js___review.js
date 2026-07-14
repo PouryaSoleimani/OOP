@@ -147,25 +147,24 @@ const customScrollBar = document.querySelector('.custom__scroll')
 const height = window.innerHeight
 const scrollTop = document.documentElement.scrollTop
 
-
+// CUSTOM SCROLLBAR
 window.addEventListener('scroll', (e) => {
   let s = e.target.scrollingElement.scrollTop
-  let percent = ((s / height) * 100).toFixed(0) * 0.8
+  let percent = ((s / height) * 100).toFixed(0) * 0.4
   customScrollBar.style.setProperty('width', `${percent}%`)
 })
 
-
+// LOCATION.PUSH
 const pushBtn = document.querySelector('.push__btn')
-
 pushBtn.addEventListener('click', () => {
   location.replace('https://google.com')
 })
 
-//^ URL SEARCH PARAMS
+// URL SEARCH PARAMS
 const search = new URLSearchParams(location.search).get('i')
 console.log('search ->', search)
 
-//^ MOUSE FOLLOWER
+// MOUSE FOLLOWER
 const follower = document.querySelector('.mouse__follower')
 document.body.addEventListener('mousemove', (e) => {
   const x = e.clientX - (follower.clientWidth / 2)
@@ -177,13 +176,13 @@ document.body.addEventListener('mousemove', (e) => {
 
 })
 
-//^ WINDOW.NAVIGATOR
+// WINDOW.NAVIGATOR
 console.log({ nav: navigator.userAgentData.platform.toUpperCase() })
 const isChrome = window.navigator.userAgent.includes('Chrome')
 const browserDetect = isChrome ? 'CHROME' : 'FIREFOX'
 console.log(`YOU ARE USING ${browserDetect}`)
 
-//^ CHECK INTERNET CONNECTION STATUS + ONLINE MODE / OFFLINE MODE
+// CHECK INTERNET CONNECTION STATUS + ONLINE MODE / OFFLINE MODE
 const offlineDiv = document.querySelector('.offline__mode')
 window.addEventListener('online', () => {
   console.log('YOUR ARE ONLINE')
@@ -193,10 +192,7 @@ window.addEventListener('offline', () => {
   document.body.classList.add('offline')
 })
 
-//^ JS HISTORY
-// 1995 => BRENDEN EICH => MOCHA => JAVASCRIPT => ECMASCRIPT => ES6 => ...
-
-
+// JS HISTORY 1995 => BRENDEN EICH => MOCHA => JAVASCRIPT => ECMASCRIPT => ES6 => ...
 
 //^ CALLBACKS =====================================================================================================================
 function callbackHandler() {
