@@ -490,3 +490,13 @@ function argsSum(...args) {
 }
 
 argsSum(10, 20, 30, 40, 50, 60, 70)
+
+
+function argsSummer(...args) {
+  for (const arg of args) {
+    let i = args.indexOf(arg)
+    console.log(`arg => ${i + 1}: ${arg}`)
+  }
+}
+
+argsSummer('mamad', 'ali', 'reza')
