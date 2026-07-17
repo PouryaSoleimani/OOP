@@ -409,11 +409,20 @@ const goals = ['iphone_14promax', 'airpod', 'apple_watch', 'motor_click_vario_bl
 
 for (const goal of goals) {
   const i = goals.indexOf(goal)
-  console.log(`%c GOAL #${i + 1} => ${goal.toUpperCase()}  `, 'color:black;background-color:white;padding:4px;border:3px solid red;font-weight:800;')
+  console.log(`%c GOAL #${i + 1} => ${goal.toUpperCase()}  `,
+    'color:black;background-color:white;padding:4px;border:3px solid red;font-weight:800;'
+  )
 }
 
 //^ FOR IN  ------------------------------------------------------------------------------------------
-const object = { id: 1, firstname: "pourya", lastname: 'soleimani', age: 32, job: 'developer', maritalStatus: 'single' }
+const object = {
+  id: 1,
+  firstname: "pourya",
+  lastname: 'soleimani',
+  age: 32,
+  job: 'developer',
+  maritalStatus: 'single'
+}
 
 for (const item in object) {
   const element = object[item];
