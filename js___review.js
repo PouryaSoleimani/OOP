@@ -406,7 +406,7 @@ usersArray.forEach((user, index) => {
       `)
 })
 
-//^ FOR OF  ------------------------------------------------------------------------------------------
+//^ FOR OF  ____________________________________________________________________________________________________________
 const goals = ['iphone_14promax', 'airpod', 'apple_watch', 'motor_click_vario_black']
 
 for (const goal of goals) {
@@ -416,7 +416,7 @@ for (const goal of goals) {
   )
 }
 
-//^ FOR IN  ------------------------------------------------------------------------------------------
+//^ FOR IN  ____________________________________________________________________________________________________________
 const object = {
   id: 1,
   firstname: "pourya",
@@ -431,7 +431,7 @@ for (const item in object) {
   console.log('ELEMENT =>', `${item}: ${typeof element == 'string' ? element.toUpperCase() : element}`)
 }
 
-//^ CRUD ------------------------------------------------------------------------------------------
+//^ CRUD ____________________________________________________________________________________________________________
 let __data = null
 const response = fetch('https://fakestoreapi.com/products').then(res => res.json()).then(res => res)
 
@@ -467,3 +467,4 @@ copyBtn.addEventListener('click', () => {
   window.navigator.clipboard.writeText(text)
   console.log('copied', text)
 })
+
