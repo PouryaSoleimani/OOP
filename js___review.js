@@ -420,3 +420,4 @@ for (const item in object) {
   console.log('ELEMENT =>', `${item}: ${typeof element == 'string' ? element.toUpperCase() : element}`)
 }
 
+//^ CRUD
