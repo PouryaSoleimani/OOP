@@ -491,7 +491,6 @@ function argsSum(...args) {
 
 argsSum(10, 20, 30, 40, 50, 60, 70)
 
-
 function argsSummer(...args) {
   for (const arg of args) {
     let i = args.indexOf(arg)
@@ -499,4 +498,4 @@ function argsSummer(...args) {
   }
 }
 
-argsSummer('mamad', 'ali', 'reza')
+argsSummer('mamad', 'ali', 'reza') 
