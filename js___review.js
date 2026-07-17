@@ -431,7 +431,7 @@ for (const item in object) {
   console.log('ELEMENT =>', `${item}: ${typeof element == 'string' ? element.toUpperCase() : element}`)
 }
 
-//^ CRUD
+//^ CRUD ------------------------------------------------------------------------------------------
 let __data = null
 const response = fetch('https://fakestoreapi.com/products').then(res => res.json()).then(res => res)
 
