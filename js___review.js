@@ -430,3 +430,25 @@ for (const item in object) {
 }
 
 //^ CRUD
+let __data = null
+const response = fetch('https://fakestoreapi.com/products').then(res => res.json()).then(res => res)
+
+console.log('response', response)
+
+// HELPER FUNCTION
+function productsLogger(products) {
+  console.log('products ====>', products)
+}
+
+const productFetcher = new Promise((resolve, reject) => {
+  const res = fetch('https://fakestoreapi.com/products')
+    .then(response => response.json())
+    .then(data => productsLogger(data));
+  if (res) {
+    resolve(res)
+  } else {
+    reject('no response')
+  }
+})
+
+
