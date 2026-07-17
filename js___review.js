@@ -498,4 +498,10 @@ function argsSummer(...args) {
   }
 }
 
-argsSummer('mamad', 'ali', 'reza') 
+argsSummer('mamad', 'ali', 'reza')
+
+// ARRAY DESTRUCTURING ____________________________________________________________________________________________________________
+const _usersArray = ['mamad', 'ali', 'majid', 'mohsen']
+const [first, , second, third] = _usersArray
+
+console.log({ first, second, third })
