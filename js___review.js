@@ -412,3 +412,10 @@ for (const goal of goals) {
   console.log(`%c GOAL #${i + 1} => ${goal.toUpperCase()}  `, 'color:black;background-color:white;padding:4px;border:3px solid red;font-weight:800;')
 }
 
+//^ FOR IN 
+const object = { id: 1, firstname: "pourya", lastname: 'soleimani', age: 32, job: 'developer', maritalStatus: 'single' }
+
+for (const item in object) {
+  const element = object[item];
+  console.log('ELEMENT =>', `${item}: ${typeof element == 'string' ? element.toUpperCase() : element}`)
+}
