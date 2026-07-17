@@ -405,8 +405,9 @@ usersArray.forEach((user, index) => {
 })
 
 // FOR OF 
-const numbers = [1, 2, 3, 4, 5, 6]
+const goals = ['iphone_14promax', 'airpod', 'apple_watch', 'motor_click_vario_black']
 
-for (const number of numbers) {
-  console.log('number =>', number)
+for (const goal of goals) {
+  const i = goals.indexOf(goal)
+  console.log(`%c GOAL #${i + 1} => ${goal.toUpperCase()}  `, 'color:black;background-color:white;padding:4px;border:3px solid red;font-weight:800')
 }
