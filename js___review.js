@@ -505,3 +505,10 @@ const _usersArray = ['mamad', 'ali', 'majid', 'mohsen']
 const [first, , second, third] = _usersArray
 
 console.log({ first, second, third })
+
+// OBJECT DESTRUCTURING ____________________________________________________________________________________________________________
+const userInfosObject = { id: 1, name: 'mamad', lastname: 'youzarsif', age: 16, job: 'designer' }
+
+let { id, name, lastname, job } = userInfosObject
+
+console.log({ id, name, lastname, job })
