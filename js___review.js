@@ -208,7 +208,7 @@ function parent(text, callback) {
   }, 2000);
 }
 
-parent('IPHONE 17PROMAX SILVER', callbackHandler)
+parent('IPHONE 14PROMAX BLACK', callbackHandler)
 
 // EXAMPLE CALLBACK FUNCTIONS =====================================================================================================================
 const books = [
@@ -468,3 +468,25 @@ copyBtn.addEventListener('click', () => {
   console.log('copied', text)
 })
 
+// ARGUMENTS ____________________________________________________________________________________________________________
+function argsSum(...args) {
+  console.log('arguments =>', arguments)
+  let sum = 0;
+
+  // WAY 1
+  let argsArray = Array.from(args)
+  argsArray.forEach(arg => {
+    console.log('arg => ', arg)
+    sum += arg
+  })
+
+  // WAY 2
+  // for (const element of args) {
+  //   sum += element
+  //   console.log('element', element)
+  // }
+
+  console.log('sum =>', sum)
+}
+
+argsSum(10, 20, 30, 40, 50, 60, 70)
