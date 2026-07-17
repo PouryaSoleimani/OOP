@@ -512,3 +512,7 @@ const userInfosObject = { id: 1, name: 'mamad', lastname: 'youzarsif', age: 16, 
 let { id, name, lastname, job } = userInfosObject
 
 console.log({ id, name, lastname, job })
+
+
+// ASYNC / AWAIT ___________________________________________________________________________________________________________________
+
