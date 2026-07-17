@@ -397,8 +397,8 @@ console.log("users array =>", usersArray)
 const usersContainer = document.getElementById('users__container')
 
 usersArray.forEach((user, index) => {
-  usersContainer.insertAdjacentHTML('beforeend', `
-      <p class="mb-8 bg-white p-5 outline-8 hover:scale-[1.05] transition-all duration-300 ease-in-out cursor-pointer outline-white/30 rounded-lg uppercase text-black text-xl font-black w-96">
+  usersContainer.insertAdjacentHTML('beforeend',
+    `<p class="mb-8 bg-white p-5 outline-8 hover:scale-[1.05] transition-all duration-300 ease-in-out cursor-pointer outline-white/30 rounded-lg uppercase text-black text-xl font-black w-96">
       ${index + 1} . ${user.firstName} ${user.lastName}
       </p>
       `)
