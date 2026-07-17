@@ -516,3 +516,12 @@ console.log({ id, name, lastname, job })
 
 // ASYNC / AWAIT ___________________________________________________________________________________________________________________
 
+async function asyncFetcher2() {
+  const res = await fetch('https://fakestoreapi.com/users')
+  const data = await res.json()
+  return data
+}
+
+const usersData = await asyncFetcher2()
+
+console.log('usersData =>', usersData) 
