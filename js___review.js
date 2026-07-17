@@ -1,3 +1,5 @@
+import { get } from "axios";
+
 //^ FOR
 // let i = 0;
 // for (i; i <= 20; i++) {
@@ -5,6 +7,7 @@
 //     console.log(i);
 //   }
 // }
+
 
 //^ WHILE
 // if (firstNumber > secondNumber) {
@@ -452,3 +455,7 @@ const productFetcher = new Promise((resolve, reject) => {
 })
 
 
+
+const axiosRes = get('https://fakestoreapi.com/products')
+
+console.log("axiosRes", axiosRes)
