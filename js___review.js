@@ -377,3 +377,27 @@ fetch('https://fakestoreapi.com/products', {
     <p class='bg-transparent'>${_product.id}. ${_product.title}</p>
     `
   })
+
+const sampleObject = {
+  '-asdasr13': { name: 'pourya', family: 'soleimani' },
+  '-ads12315': { name: 'mohammad', family: 'akbari' }
+}
+
+const _entries = Object.entries(sampleObject)
+console.log('ENTRIES =>', _entries)
+
+let usersArray = []
+_entries.forEach((entry) => {
+  const object = { id: entry[0], firstName: entry[1].name, lastName: entry[1].family }
+  usersArray.push(object)
+})
+
+console.log("users array =>", usersArray)
+
+const usersContainer = document.getElementById('users__container')
+
+usersArray.forEach((user, index) => {
+  usersContainer.insertAdjacentHTML('beforeend', `
+      <p class="mb-8 bg-white p-5 outline-8 hover:scale-[1.05] transition-all duration-300 ease-in-out cursor-pointer outline-white/30 rounded-lg uppercase text-black text-xl font-black w-96">${index + 1} . ${user.firstName} ${user.lastName}</p>
+      `)
+})
