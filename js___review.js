@@ -359,26 +359,26 @@ let _data = []
 let _product = {}
 const singleProductDiv = document.querySelector('.single__product')
 
-fetch('https://fakestoreapi.com/products', {
-  method: "POST",
-  headers: {
-    'content-type': 'application/json'
-  },
-  body: {
-    title: 'title',
-    price: 'price'
-  }
-})
-  .then(response => response.json())
-  .then(data => {
-    _data = data;
-    console.log("_data", _data)
-    _product = data[Math.floor(Math.random() * 20)]
-    console.log('product => ', _product)
-    singleProductDiv.innerHTML = `
-    <p class='bg-transparent'>${_product.id}. ${_product.title}</p>
-    `
-  })
+// fetch('https://fakestoreapi.com/products', {
+//   method: "POST",
+//   headers: {
+//     'content-type': 'application/json'
+//   },
+//   body: {
+//     title: 'title',
+//     price: 'price'
+//   }
+// })
+//   .then(response => response.json())
+//   .then(data => {
+//     _data = data;
+//     console.log("_data", _data)
+//     _product = data[Math.floor(Math.random() * 20)]
+//     console.log('product => ', _product)
+//     singleProductDiv.innerHTML = `
+//     <p class='bg-transparent'>${_product.id}. ${_product.title}</p>
+//     `
+//   })
 
 const sampleObject = {
   '-asdasr13': { name: 'pourya', family: 'soleimani' },
@@ -450,13 +450,20 @@ const fetcher = new Promise((resolve, reject) => {
     .catch(err => console.log('err'))
 })
 
-// NEW FETCH METHOD
+// NEW FETCH METHOD ____________________________________________________________________________________________________________
 async function asyncFetcher() {
   const res = await fetch("https://fakestoreapi.com/products")
   const data = await res.json()
   return data
 }
-
 const newData = await asyncFetcher()
-
 console.log('new data =>', newData)
+
+// CLIPBOARD ____________________________________________________________________________________________________________
+const copyBtn = document.getElementById("copy__btn")
+const text = 'Copied text'
+
+copyBtn.addEventListener('click', () => {
+  window.navigator.clipboard.writeText(text)
+  console.log('copied', text)
+})
