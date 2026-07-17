@@ -1,4 +1,3 @@
-import { get } from "axios";
 
 //^ FOR
 // let i = 0;
@@ -438,24 +437,15 @@ const response = fetch('https://fakestoreapi.com/products').then(res => res.json
 
 console.log('response', response)
 
-// HELPER FUNCTION
-function productsLogger(products) {
-  console.log('products ====>', products)
+function logger(data) {
+  console.log('logger data ->', data)
 }
 
-const productFetcher = new Promise((resolve, reject) => {
-  const res = fetch('https://fakestoreapi.com/products')
-    .then(response => response.json())
-    .then(data => productsLogger(data));
-  if (res) {
-    resolve(res)
-  } else {
-    reject('no response')
-  }
+const fetcher = new Promise((resolve, reject) => {
+  const response = fetch('https://fakestoreapi.com/products', {
+    method: 'GET',
+    headers: { 'content-type': "application/josn" }
+  }).then(res => res.json())
+    .then(res => logger(res))
+    .catch(err => console.log('err'))
 })
-
-
-
-const axiosRes = get('https://fakestoreapi.com/products')
-
-console.log("axiosRes", axiosRes)
