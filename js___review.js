@@ -404,10 +404,11 @@ usersArray.forEach((user, index) => {
       `)
 })
 
-// FOR OF 
+//^ FOR OF 
 const goals = ['iphone_14promax', 'airpod', 'apple_watch', 'motor_click_vario_black']
 
 for (const goal of goals) {
   const i = goals.indexOf(goal)
   console.log(`%c GOAL #${i + 1} => ${goal.toUpperCase()}  `, 'color:black;background-color:white;padding:4px;border:3px solid red;font-weight:800;')
 }
+
