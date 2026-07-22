@@ -448,7 +448,7 @@ const fetcher = new Promise((resolve, reject) => {
     .catch(err => console.log('err'))
 })
 
-// NEW FETCH METHOD ____________________________________________________________________________________________________________
+//^ NEW FETCH METHOD ____________________________________________________________________________________________________________
 async function asyncFetcher() {
   const res = await fetch("https://fakestoreapi.com/products")
   const data = await res.json()
@@ -522,5 +522,5 @@ async function asyncFetcher2() {
 
 const usersData = await asyncFetcher2()
 
-console.log('usersData =>', usersData) 
+console.log('usersData =>', usersData)
 
