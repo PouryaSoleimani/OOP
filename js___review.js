@@ -525,3 +525,4 @@ async function asyncFetcher2() {
 const usersData = await asyncFetcher2()
 
 console.log('usersData =>', usersData) 
+
