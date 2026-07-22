@@ -405,7 +405,7 @@ usersArray.forEach((user, index) => {
 })
 
 //^ FOR OF  ____________________________________________________________________________________________________________
-const goals = ['iphone_14promax', 'airpod', 'apple_watch', 'motor_click_vario_black']
+const goals = ['iphone_14promax', 'airpod', 'apple_watch', 'motor_aerox']
 
 for (const goal of goals) {
   const i = goals.indexOf(goal)
