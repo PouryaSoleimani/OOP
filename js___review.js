@@ -143,26 +143,27 @@
 // }, 1000);
 
 //^ CUSTOM SCROLL
-const customScrollBar = document.querySelector('.custom__scroll')
-const height = window.innerHeight
-const scrollTop = document.documentElement.scrollTop
+// const customScrollBar = document.querySelector('.custom__scroll')
+// const height = window.innerHeight
+// const scrollTop = document.documentElement.scrollTop
 
 // CUSTOM SCROLLBAR HANDLER
-window.addEventListener('scroll', (e) => {
-  let s = e.target.scrollingElement.scrollTop
-  let percent = ((s / height) * 100).toFixed(0) * 0.4
-  customScrollBar.style.setProperty('width', `${percent}%`)
-})
+// window.addEventListener('scroll', (e) => {
+// let s = e.target.scrollingElement.scrollTop
+// let percent = ((s / height) * 100).toFixed(0) * 0.4
+// customScrollBar.style.setProperty('width', `${percent}%`)
+// })
 
 // LOCATION.PUSH
-const pushBtn = document.querySelector('.push__btn')
-pushBtn.addEventListener('click', () => {
-  location.replace('https://google.com')
-})
+// const pushBtn = document.querySelector('.push__btn')
+// pushBtn.addEventListener('click', () => {
+// location.replace('https://google.com')
+// })
 
 // URL SEARCH PARAMS
-const search = new URLSearchParams(location.search).get('i')
-console.log('search ->', search)
+
+// const search = new URLSearchParams(location.search).get('i')
+// console.log('search ->', search)
 
 // MOUSE FOLLOWER
 const follower = document.querySelector('.mouse__follower')
@@ -523,4 +524,8 @@ async function asyncFetcher2() {
 const usersData = await asyncFetcher2()
 
 console.log('usersData =>', usersData)
+
+
+const search = new URLSearchParams(location.search).get('i')
+console.log('search => ', search)
 
