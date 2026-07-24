@@ -196,71 +196,71 @@
 // JS HISTORY 1995 => BRENDEN EICH => MOCHA => JAVASCRIPT => ECMASCRIPT => ES6 => ...
 
 //^ CALLBACKS =====================================================================================================================
-function callbackHandler() {
-  console.log("CALLBACK")
-}
+// function callbackHandler() {
+//   console.log("CALLBACK")
+// }
 
-function parent(text, callback) {
-  setTimeout(() => {
-    console.log('TEXT =>', text)
-    callback()
-  }, 2000);
-}
+// function parent(text, callback) {
+//   setTimeout(() => {
+//     console.log('TEXT =>', text)
+//     callback()
+//   }, 2000);
+// }
 
-parent('IPHONE 14PROMAX BLACK', callbackHandler)
+// parent('IPHONE 14PROMAX BLACK', callbackHandler)
 
 // EXAMPLE CALLBACK FUNCTIONS =====================================================================================================================
-const books = [
-  { id: 1, title: 'book1', price: 200_000 },
-  { id: 2, title: 'book2', price: 150_000 },
-  { id: 3, title: 'book3', price: 250_000 },
-]
+// const books = [
+//   { id: 1, title: 'book1', price: 200_000 },
+//   { id: 2, title: 'book2', price: 150_000 },
+//   { id: 3, title: 'book3', price: 250_000 },
+// ]
 
-function booksLogger() {
-  console.log(
-    `%c UPDATED LOG =>`,
-    'color:black ; background-color:white; padding:4px 8px; border-radius:8px;font-weight:800;',
-    books)
-}
+// function booksLogger() {
+//   console.log(
+//     `%c UPDATED LOG =>`,
+//     'color:black ; background-color:white; padding:4px 8px; border-radius:8px;font-weight:800;',
+//     books)
+// }
 
-function addBook(cb) {
-  const newBook = {
-    id: books.length + 1,
-    title: 'book4',
-    price: 300_000
-  }
-  setTimeout(() => {
-    books.push(newBook)
-    cb()
-  }, 4000);
-}
+// function addBook(cb) {
+//   const newBook = {
+//     id: books.length + 1,
+//     title: 'book4',
+//     price: 300_000
+//   }
+//   setTimeout(() => {
+//     books.push(newBook)
+//     cb()
+//   }, 4000);
+// }
 
-addBook(booksLogger)
+// addBook(booksLogger)
 
 // EXAMPLE 2 =====================================================================================================================
-const cars = [
-  { id: 1, title: 'car1', price: 500_000_000 },
-  { id: 2, title: 'car2', price: 350_000_000 },
-  { id: 3, title: 'car3', price: 250_000_000 }
-]
+// const cars = [
+//   { id: 1, title: 'car1', price: 500_000_000 },
+//   { id: 2, title: 'car2', price: 350_000_000 },
+//   { id: 3, title: 'car3', price: 250_000_000 }
+// ]
 
-const newCar = { id: 4, title: 'car4', price: 450_000_000 }
+// const newCar = { id: 4, title: 'car4', price: 450_000_000 }
 
-function carLogger() {
-  console.log('cars =>', cars)
-}
+// function carLogger() {
+//   console.log('cars =>', cars)
+// }
 
-function addCar(newCar, callback) {
-  setTimeout(() => {
-    cars.push(newCar)
-    callback()
-  }, 3000);
-}
+// function addCar(newCar, callback) {
+//   setTimeout(() => {
+//     cars.push(newCar)
+//     callback()
+//   }, 3000);
+// }
 
-addCar(newCar, carLogger)
+// addCar(newCar, carLogger)
 
-const filteredCars = cars.filter(car => car.price <= 350_000_000)
-console.log('filtered Cars =>', filteredCars)
+// const filteredCars = cars.filter(car => car.price <= 350_000_000)
+// console.log('filtered Cars =>', filteredCars)
 
 //^ PROMISES =======================================================================================================
 const products = [
