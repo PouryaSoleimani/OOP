@@ -564,3 +564,16 @@ const flatedNames = names.reduce((a, b) => {
 }, [])
 
 console.log('flated array =>', flatedNames)
+
+
+const myGoals = [
+  { id: 1, title: 'AEROX', price: 350_000_000 },
+  { id: 2, title: 'APPLE__PACK', price: 200_000_000 },
+  { id: 3, title: 'MONITOR__49INCH', price: 120_000_000 },
+]
+
+const moneyToAchieve = myGoals.reduce((a, b) => {
+  return a + b.price
+}, 0)
+
+console.log(`GOD I WANT ${moneyToAchieve.toLocaleString()} TOMANS`)
