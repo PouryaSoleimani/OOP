@@ -552,7 +552,7 @@ const objects = [
 ]
 
 const totalObjectPrice = objects.reduce((a, b) => {
-  return a.price + b.price
+  return a + b.price
 }, 0)
 
-console.log("total objects price", totalObjectPrice)
+console.log("total objects price", `${totalObjectPrice}/000/000 Tomans`)
