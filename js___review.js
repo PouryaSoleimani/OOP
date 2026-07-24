@@ -556,3 +556,11 @@ const totalObjectPrice = objects.reduce((a, b) => {
 }, 0)
 
 console.log("total objects price", `${totalObjectPrice}/000/000 Tomans`)
+
+const names = [['amin', 'mohammad'], ['ali', 'majid'], ['reza', 'mohsen']]
+
+const flatedNames = names.reduce((a, b) => {
+  return [...a, ...b]
+}, [])
+
+console.log('flated array =>', flatedNames)
