@@ -166,32 +166,32 @@
 // console.log('search ->', search)
 
 // MOUSE FOLLOWER
-const follower = document.querySelector('.mouse__follower')
-document.body.addEventListener('mousemove', (e) => {
-  const x = e.clientX - (follower.clientWidth / 2)
-  const y = e.clientY - (follower.clientHeight / 2.5)
-  setTimeout(() => {
-    follower.style.setProperty('left', `${x}px`)
-    follower.style.setProperty('top', `${y}px`)
-  }, 150);
+// const follower = document.querySelector('.mouse__follower')
+// document.body.addEventListener('mousemove', (e) => {
+//   const x = e.clientX - (follower.clientWidth / 2)
+//   const y = e.clientY - (follower.clientHeight / 2.5)
+//   setTimeout(() => {
+//     follower.style.setProperty('left', `${x}px`)
+//     follower.style.setProperty('top', `${y}px`)
+//   }, 150);
 
-})
+// })
 
 // WINDOW.NAVIGATOR
-console.log({ nav: navigator.userAgentData.platform.toUpperCase() })
-const isChrome = window.navigator.userAgent.includes('Chrome')
-const browserDetect = isChrome ? 'CHROME' : 'FIREFOX'
-console.log(`YOU ARE USING ${browserDetect}`)
+// console.log({ nav: navigator.userAgentData.platform.toUpperCase() })
+// const isChrome = window.navigator.userAgent.includes('Chrome')
+// const browserDetect = isChrome ? 'CHROME' : 'FIREFOX'
+// console.log(`YOU ARE USING ${browserDetect}`)
 
 // CHECK INTERNET CONNECTION STATUS + ONLINE MODE / OFFLINE MODE
-const offlineDiv = document.querySelector('.offline__mode')
-window.addEventListener('online', () => {
-  console.log('YOUR ARE ONLINE')
-})
-window.addEventListener('offline', () => {
-  console.log('offline')
-  document.body.classList.add('offline')
-})
+// const offlineDiv = document.querySelector('.offline__mode')
+// window.addEventListener('online', () => {
+//   console.log('YOUR ARE ONLINE')
+// })
+// window.addEventListener('offline', () => {
+//   console.log('offline')
+//   document.body.classList.add('offline')
+// })
 
 // JS HISTORY 1995 => BRENDEN EICH => MOCHA => JAVASCRIPT => ECMASCRIPT => ES6 => ...
 
@@ -357,27 +357,6 @@ document.addEventListener('DOMContentLoaded', () => {
 let _data = []
 let _product = {}
 const singleProductDiv = document.querySelector('.single__product')
-
-// fetch('https://fakestoreapi.com/products', {
-//   method: "POST",
-//   headers: {
-//     'content-type': 'application/json'
-//   },
-//   body: {
-//     title: 'title',
-//     price: 'price'
-//   }
-// })
-//   .then(response => response.json())
-//   .then(data => {
-//     _data = data;
-//     console.log("_data", _data)
-//     _product = data[Math.floor(Math.random() * 20)]
-//     console.log('product => ', _product)
-//     singleProductDiv.innerHTML = `
-//     <p class='bg-transparent'>${_product.id}. ${_product.title}</p>
-//     `
-//   })
 
 const sampleObject = {
   '-asdasr13': { name: 'pourya', family: 'soleimani' },
