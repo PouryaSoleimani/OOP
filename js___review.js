@@ -263,94 +263,94 @@
 // console.log('filtered Cars =>', filteredCars)
 
 //^ PROMISES =======================================================================================================
-const products = [
-  { id: 1, title: 'product 1', price: 2_000_000 },
-  { id: 2, title: 'product 2', price: 3_000_000 },
-  { id: 3, title: 'product 3', price: 4_000_000 },
-]
+// const products = [
+//   { id: 1, title: 'product 1', price: 2_000_000 },
+//   { id: 2, title: 'product 2', price: 3_000_000 },
+//   { id: 3, title: 'product 3', price: 4_000_000 },
+// ]
 
-const newProduct = { id: 4, title: 'product 4', price: 5_000_000 }
+// const newProduct = { id: 4, title: 'product 4', price: 5_000_000 }
 
-const productAdder = new Promise((resolve, reject) => {
-  if (2 == 2) {
-    setTimeout(() => {
-      console.log('%c PROMISE RESOLVED', 'color:limegreen')
-      resolve()
-    }, 3000);
-  } else {
-    reject('PROMISE REJECTED')
-  }
-})
+// const productAdder = new Promise((resolve, reject) => {
+//   if (2 == 2) {
+//     setTimeout(() => {
+//       console.log('%c PROMISE RESOLVED', 'color:limegreen')
+//       resolve()
+//     }, 3000);
+//   } else {
+//     reject('PROMISE REJECTED')
+//   }
+// })
 
-productAdder
-  .then(res => res)
-  .catch(err => console.log("%c ERROR =>", 'background-color: red;padding: 4px;', err))
-  .finally(console.log('FINALLY'))
+// productAdder
+//   .then(res => res)
+//   .catch(err => console.log("%c ERROR =>", 'background-color: red;padding: 4px;', err))
+//   .finally(console.log('FINALLY'))
 
-const productsWrapper = document.querySelector('.products')
+// const productsWrapper = document.querySelector('.products')
 
-const productsFetcher = new Promise((resolve, reject) => {
-  const res = fetch('https://fakestoreapi.com/products')
-    .then(response => response.json())
-    .then(data => data);
-  if (res) {
-    resolve(res)
-  } else {
-    reject('NO RESPONSE')
-  }
-})
+// const productsFetcher = new Promise((resolve, reject) => {
+//   const res = fetch('https://fakestoreapi.com/products')
+//     .then(response => response.json())
+//     .then(data => data);
+//   if (res) {
+//     resolve(res)
+//   } else {
+//     reject('NO RESPONSE')
+//   }
+// })
 
 // INJECT FETCHED PRODUCTS
-productsFetcher
-  .then(response => {
-    console.log('fetch response =>', response)
-    const html = []
-    response.forEach(element => {
-      const _html = ` <p class="product__item">${element.id}. ${element.title.slice(0, 20)}</p> `
-      html.push(_html)
-    });
-    productsWrapper.innerHTML = html.join('')
-  })
-  .catch(err => console.error('promise error => ', err.message))
+// productsFetcher
+//   .then(response => {
+//     console.log('fetch response =>', response)
+//     const html = []
+//     response.forEach(element => {
+//       const _html = ` <p class="product__item">${element.id}. ${element.title.slice(0, 20)}</p> `
+//       html.push(_html)
+//     });
+//     productsWrapper.innerHTML = html.join('')
+//   })
+//   .catch(err => console.error('promise error => ', err.message))
 
 
 
 // PROMISE EXAMPLE 
-let isLoggedIn = true
-const myPromise = new Promise((resolve, reject) => {
-  let data = 'pourya'
-  if (isLoggedIn) {
-    resolve(data)
-  } else {
-    reject('PROMISE REJECTED')
-  }
-})
+// let isLoggedIn = true
+// const myPromise = new Promise((resolve, reject) => {
+//   let data = 'pourya'
+//   if (isLoggedIn) {
+//     resolve(data)
+//   } else {
+//     reject('PROMISE REJECTED')
+//   }
+// })
 
-myPromise
-  .then(res => {
-    console.log('🟩 PROMISE RESOLVED =>', res.toUpperCase()); return res.toUpperCase()
-  })
-  .then(res => {
-    console.log('2nd THEN =>', res);
-    return res.concat('!')
-  })
-  .then(res => console.log('3rd THEN =>', res))
-  .catch(err => console.log('🟥 PROMISE REJECTED =>', err))
-  .finally(console.log('🟨 PROMISE FINALLY'))
+// myPromise
+//   .then(res => {
+//     console.log('🟩 PROMISE RESOLVED =>', res.toUpperCase()); return res.toUpperCase()
+//   })
+//   .then(res => {
+//     console.log('2nd THEN =>', res);
+//     return res.concat('!')
+//   })
+//   .then(res => console.log('3rd THEN =>', res))
+//   .catch(err => console.log('🟥 PROMISE REJECTED =>', err))
+//   .finally(console.log('🟨 PROMISE FINALLY'))
 
-// LOAD CDN WITH PROMISES
-const loadCssFiles = () => {
-  return new Promise((resolve, reject) => {
-    const tailwindScriptTag = document.createElement('script')
-    tailwindScriptTag.src = "https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
-    document.body.insertAdjacentElement('beforeend', tailwindScriptTag)
-    resolve("script injected")
-  })
-}
+// // LOAD CDN WITH PROMISES
+// const loadCssFiles = () => {
+//   return new Promise((resolve, reject) => {
+//     const tailwindScriptTag = document.createElement('script')
+//     tailwindScriptTag.src = "https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
+//     document.body.insertAdjacentElement('beforeend', tailwindScriptTag)
+//     resolve("script injected")
+//   })
+// }
 
-document.addEventListener('DOMContentLoaded', () => {
-  loadCssFiles().then(res => console.log('res =>', res.toUpperCase()))
-})
+// document.addEventListener('DOMContentLoaded', () => {
+//   loadCssFiles().then(res => console.log('res =>', res.toUpperCase()))
+// })
 
 //^ FETCH API
 
