@@ -524,7 +524,7 @@ const object = {
     this.lastname = newLastName
   }
 }
-
+ 
 object.setFirstName('Pourya')
 object.setLastname('Soleimani')
 object.showInfos()
