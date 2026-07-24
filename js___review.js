@@ -354,157 +354,157 @@
 
 //^ FETCH API
 
-let _data = []
-let _product = {}
-const singleProductDiv = document.querySelector('.single__product')
+// let _data = []
+// let _product = {}
+// const singleProductDiv = document.querySelector('.single__product')
 
-const sampleObject = {
-  '-asdasr13': { name: 'pourya', family: 'soleimani' },
-  '-ads12315': { name: 'mohammad', family: 'akbari' }
-}
+// const sampleObject = {
+//   '-asdasr13': { name: 'pourya', family: 'soleimani' },
+//   '-ads12315': { name: 'mohammad', family: 'akbari' }
+// }
 
-const _entries = Object.entries(sampleObject)
-console.log('ENTRIES =>', _entries)
+// const _entries = Object.entries(sampleObject)
+// console.log('ENTRIES =>', _entries)
 
-let usersArray = []
-_entries.forEach((entry) => {
-  const object = { id: entry[0], firstName: entry[1].name, lastName: entry[1].family }
-  usersArray.push(object)
-})
+// let usersArray = []
+// _entries.forEach((entry) => {
+//   const object = { id: entry[0], firstName: entry[1].name, lastName: entry[1].family }
+//   usersArray.push(object)
+// })
 
-console.log("users array =>", usersArray)
+// console.log("users array =>", usersArray)
 
-const usersContainer = document.getElementById('users__container')
+// const usersContainer = document.getElementById('users__container')
 
-usersArray.forEach((user, index) => {
-  usersContainer.insertAdjacentHTML('beforeend',
-    `<p class="mb-8 bg-white p-5 outline-8 hover:scale-[1.05] transition-all duration-300 ease-in-out cursor-pointer outline-white/30 rounded-lg uppercase text-black text-xl font-black w-96">
-      ${index + 1} . ${user.firstName} ${user.lastName}
-      </p>
-      `)
-})
+// usersArray.forEach((user, index) => {
+//   usersContainer.insertAdjacentHTML('beforeend',
+//     `<p class="mb-8 bg-white p-5 outline-8 hover:scale-[1.05] transition-all duration-300 ease-in-out cursor-pointer outline-white/30 rounded-lg uppercase text-black text-xl font-black w-96">
+//       ${index + 1} . ${user.firstName} ${user.lastName}
+//       </p>
+//       `)
+// })
 
 //^ FOR OF  ____________________________________________________________________________________________________________
-const goals = ['iphone_14promax', 'airpod', 'apple_watch', 'motor_aerox']
+// const goals = ['iphone_14promax', 'airpod', 'apple_watch', 'motor_aerox']
 
-for (const goal of goals) {
-  const i = goals.indexOf(goal)
-  console.log(`%c GOAL #${i + 1} => ${goal.toUpperCase()}  `,
-    'color:black;background-color:white;padding:4px;border:3px solid red;font-weight:800;'
-  )
-}
+// for (const goal of goals) {
+//   const i = goals.indexOf(goal)
+//   console.log(`%c GOAL #${i + 1} => ${goal.toUpperCase()}  `,
+//     'color:black;background-color:white;padding:4px;border:3px solid red;font-weight:800;'
+//   )
+// }
 
 //^ FOR IN  ____________________________________________________________________________________________________________
-const object = {
-  id: 1,
-  firstname: "pourya",
-  lastname: 'soleimani',
-  age: 32,
-  job: 'developer',
-  maritalStatus: 'single'
-}
+// const object = {
+//   id: 1,
+//   firstname: "pourya",
+//   lastname: 'soleimani',
+//   age: 32,
+//   job: 'developer',
+//   maritalStatus: 'single'
+// }
 
-for (const item in object) {
-  const element = object[item];
-  console.log('ELEMENT =>', `${item}: ${typeof element == 'string' ? element.toUpperCase() : element}`)
-}
+// for (const item in object) {
+//   const element = object[item];
+//   console.log('ELEMENT =>', `${item}: ${typeof element == 'string' ? element.toUpperCase() : element}`)
+// }
 
 //^ CRUD ____________________________________________________________________________________________________________
-let __data = null
-const response = fetch('https://fakestoreapi.com/products').then(res => res.json()).then(res => res)
+// let __data = null
+// const response = fetch('https://fakestoreapi.com/products').then(res => res.json()).then(res => res)
 
-console.log('response', response)
+// console.log('response', response)
 
-function logger(data) {
-  console.log('logger data ->', data)
-}
+// function logger(data) {
+//   console.log('logger data ->', data)
+// }
 
-const fetcher = new Promise((resolve, reject) => {
-  const response = fetch('https://fakestoreapi.com/products', {
-    method: 'GET',
-    headers: { 'content-type': "application/josn" }
-  }).then(res => res.json())
-    .then(res => logger(res))
-    .catch(err => console.log('err'))
-})
+// const fetcher = new Promise((resolve, reject) => {
+//   const response = fetch('https://fakestoreapi.com/products', {
+//     method: 'GET',
+//     headers: { 'content-type': "application/josn" }
+//   }).then(res => res.json())
+//     .then(res => logger(res))
+//     .catch(err => console.log('err'))
+// })
 
 //^ NEW FETCH METHOD ____________________________________________________________________________________________________________
-async function asyncFetcher() {
-  const res = await fetch("https://fakestoreapi.com/products")
-  const data = await res.json()
-  return data
-}
-const newData = await asyncFetcher()
-console.log('new data =>', newData)
+// async function asyncFetcher() {
+//   const res = await fetch("https://fakestoreapi.com/products")
+//   const data = await res.json()
+//   return data
+// }
+// const newData = await asyncFetcher()
+// console.log('new data =>', newData)
 
 // CLIPBOARD ____________________________________________________________________________________________________________
-const copyBtn = document.getElementById("copy__btn")
-const text = 'Copied text'
+// const copyBtn = document.getElementById("copy__btn")
+// const text = 'Copied text'
 
-copyBtn.addEventListener('click', () => {
-  window.navigator.clipboard.writeText(text)
-  console.log('copied', text)
-})
+// copyBtn.addEventListener('click', () => {
+//   window.navigator.clipboard.writeText(text)
+//   console.log('copied', text)
+// })
 
 // ARGUMENTS __________________________________________________________________________________________________________________________________
-function argsSum(...args) {
-  console.log('arguments =>', arguments)
-  let sum = 0;
+// function argsSum(...args) {
+//   console.log('arguments =>', arguments)
+//   let sum = 0;
 
-  // WAY 1
-  let argsArray = Array.from(args)
-  argsArray.forEach(arg => {
-    console.log('arg => ', arg)
-    sum += arg
-  })
+//   // WAY 1
+//   let argsArray = Array.from(args)
+//   argsArray.forEach(arg => {
+//     console.log('arg => ', arg)
+//     sum += arg
+//   })
 
-  // WAY 2
-  // for (const element of args) {
-  //   sum += element
-  //   console.log('element', element)
-  // }
+//   // WAY 2
+//   // for (const element of args) {
+//   //   sum += element
+//   //   console.log('element', element)
+//   // }
 
-  console.log('sum =>', sum)
-}
+//   console.log('sum =>', sum)
+// }
 
-argsSum(10, 20, 30, 40, 50, 60, 70)
+// argsSum(10, 20, 30, 40, 50, 60, 70)
 
-function argsSummer(...args) {
-  for (const arg of args) {
-    let i = args.indexOf(arg)
-    console.log(`arg => ${i + 1}: ${arg}`)
-  }
-}
+// function argsSummer(...args) {
+//   for (const arg of args) {
+//     let i = args.indexOf(arg)
+//     console.log(`arg => ${i + 1}: ${arg}`)
+//   }
+// }
 
-argsSummer('mamad', 'ali', 'reza')
+// argsSummer('mamad', 'ali', 'reza')
 
 // ARRAY DESTRUCTURING ____________________________________________________________________________________________________________
-const _usersArray = ['mamad', 'ali', 'majid', 'mohsen']
-const [first, , second, third] = _usersArray
+// const _usersArray = ['mamad', 'ali', 'majid', 'mohsen']
+// const [first, , second, third] = _usersArray
 
-console.log({ first, second, third })
+// console.log({ first, second, third })
 
 // OBJECT DESTRUCTURING ____________________________________________________________________________________________________________
-const userInfosObject = { id: 1, name: 'mamad', lastname: 'youzarsif', age: 16, job: 'designer' }
+// const userInfosObject = { id: 1, name: 'mamad', lastname: 'youzarsif', age: 16, job: 'designer' }
 
-let { id, name, lastname, job } = userInfosObject
+// let { id, name, lastname, job } = userInfosObject
 
-console.log({ id, name, lastname, job })
+// console.log({ id, name, lastname, job })
 
 
-// ASYNC / AWAIT ___________________________________________________________________________________________________________________
+// URLSEARCHPARAMS ___________________________________________________________________________________________________________________
+// const search = new URLSearchParams(location.search).get('i')
+// console.log('search => ', search)
 
+//^ ASYNC / AWAIT ___________________________________________________________________________________________________________________
 async function asyncFetcher2() {
   const res = await fetch('https://fakestoreapi.com/users')
   const data = await res.json()
   return data
 }
-
 const usersData = await asyncFetcher2()
-
 console.log('usersData =>', usersData)
 
 
-const search = new URLSearchParams(location.search).get('i')
-console.log('search => ', search)
+
 
