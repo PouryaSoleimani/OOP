@@ -536,3 +536,23 @@ numbers.reduce((prev, current) => {
   console.log(prev, current)
   return prev + current
 })
+
+const prices = [350, 200, 20, 5, 120]
+const totalPrice = prices.reduce((a, b) => {
+  return a + b
+})
+console.log('total price =>', totalPrice)
+
+
+const objects = [
+  { id: 1, title: 'motor__aerox', price: 350 },
+  { id: 2, title: 'iphone', price: 200 },
+  { id: 3, title: 'airpod & iwatch', price: 25 },
+  { id: 4, title: 'monitor__49inch', price: 120 },
+]
+
+const totalObjectPrice = objects.reduce((a, b) => {
+  return a.price + b.price
+}, 0)
+
+console.log("total objects price", totalObjectPrice)
