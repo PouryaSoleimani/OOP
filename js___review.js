@@ -528,3 +528,11 @@ const object = {
 object.setFirstName('Pourya')
 object.setLastname('Soleimani')
 object.showInfos()
+
+
+// REDUCE -------------------------------------------------------------------------------------------------------------------------
+const numbers = ["i", " am", " a", ' Fullstack', "Developer"]
+numbers.reduce((prev, current) => {
+  console.log(prev, current)
+  return prev + current
+})
