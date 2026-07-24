@@ -579,3 +579,4 @@ const moneyToAchieve = myGoals.reduce((a, b) => {
 console.log(`GOD I WANT ${moneyToAchieve.toLocaleString()} TOMANS`)
 
 // MULTI TAB -------------------------------------------------------------------------------------------------------------------------
+ 
