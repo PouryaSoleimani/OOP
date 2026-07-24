@@ -497,14 +497,34 @@
 // console.log('search => ', search)
 
 //^ ASYNC / AWAIT ___________________________________________________________________________________________________________________
-async function asyncFetcher2() {
-  const res = await fetch('https://fakestoreapi.com/users')
-  const data = await res.json()
-  return data
+// async function asyncFetcher2() {
+//   const res = await fetch('https://fakestoreapi.com/users')
+//   const data = await res.json()
+//   return data
+// }
+// const usersData = await asyncFetcher2()
+// console.log('usersData =>', usersData)
+
+
+// THIS -------------------------------------------------------------------------------------------------------------------------
+const object = {
+  firstname: 'pourya',
+  lastname: 'soleimani',
+  job: "FullStack Developer",
+
+  showInfos() {
+    console.log(`${this.firstname} ${this.lastname} - ${this.job}`)
+  },
+
+  setFirstName(newName) {
+    this.firstname = newName
+  },
+
+  setLastname(newLastName) {
+    this.lastname = newLastName
+  }
 }
-const usersData = await asyncFetcher2()
-console.log('usersData =>', usersData)
 
-
-
-
+object.setFirstName('Pourya')
+object.setLastname('Soleimani')
+object.showInfos()
