@@ -582,3 +582,4 @@ console.log(`GOD I WANT ${moneyToAchieve.toLocaleString()} TOMANS`)
 // OTP PASSWORD INPUT
 
 
+// BarsamCallOf1
