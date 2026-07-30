@@ -1,10 +1,10 @@
 {
-  "printwidth": 400,
+  "printwidth": 900,
   "semi": true,
   "singleAttributePerLine": false,
   "arrowParens": "always",
   "bracketSpacing": true,
   "bracketSameLine": true,
   "experimentalOperatorPosition": "end",
-  "objectWrap": "collapse"
+  "objectWrap": "preserve"
 }
