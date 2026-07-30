@@ -107,4 +107,4 @@ function caller() {
 }
 const result = caller.bind(mySelf)
 result()
-// BIND RETURN A FUNCTION & CALL/APPLY RETURNS A VALUE
+// BIND RETURNS A FUNCTION & CALL/APPLY RETURNS A VALUE
