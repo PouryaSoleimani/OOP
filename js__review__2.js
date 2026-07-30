@@ -126,4 +126,31 @@ const products = [
 // const shuffled = products.sort(() => Math.random() - 0.5)
 // console.log(shuffled)
 
+// COOKIES
+const addBtn = document.querySelector('.add__cookie')
+const updateBtn = document.querySelector('.update__cookie')
+const deleteBtn = document.querySelector('.delete__cookie')
 
+addBtn.addEventListener('click', () => {
+  const now = new Date()
+  now.setTime(now.getTime() + 2 * 24 * 60 * 60 * 1000)
+  document.cookie = `username=PouryaSoleimani;path:/;expires=${now}`
+  document.cookie = `token=29103kojafncaklsjjd12984rukajscnasklj19872;path:/;expires=${now}`
+})
+
+updateBtn.addEventListener('click', () => {
+  const now = new Date()
+  now.setTime(now.getTime() + 2 * 24 * 60 * 60 * 1000)
+  document.cookie = `username=PouryaSoleimani2;path:/;expires=${now}`
+})
+
+deleteBtn.addEventListener('click', () => {
+  const now = new Date()
+  now.setTime(now.getTime() - 2 * 24 * 60 * 60 * 1000)
+  document.cookie = `username=PouryaSoleimani2;path:/;expires=${now}`
+})
+
+const tokenValueTag = document.querySelector('.token__value')
+const token = document.cookie.split(';').find(i => i.includes('token'))
+const tokenValue = token.slice(token.indexOf("=") + 1)
+tokenValueTag.innerHTML = tokenValue

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="./fav.png" type="image/png" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
       rel="stylesheet"
       type="text/css"
@@ -317,6 +318,17 @@
 
     <div class="flex justify-center items-center py-32">
       <button id="copy__btn" class="btn mx-auto my-32">COPY</button>
+    </div>
+
+    <!--^ COOKIES -->
+    <div class="grid grid-cols-3 border-4 gap-24 border-zinc-700 justify-center p-32 w-11/12 my-32 mx-auto">
+      <button class="btn h-[48px] add__cookie bg-emerald-600">ADD COOKIE</button>
+      <button class="btn h-[48px] delete__cookie bg-rose-600">DELETE COOKIE</button>
+      <button class="btn h-[48px] update__cookie bg-sky-600">UPDATE COOKIE</button>
+    </div>
+
+    <div class="grid w-11/12 my-32 h-[200px] p-32 mx-auto outline-8 items-center outline-white/50 rounded-2xl">
+      <h2 class="token__value"></h2>
     </div>
     
     <!--//^ SCRIPTS ----------------------------------------------------------------------------------------------------------------------------->
