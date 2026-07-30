@@ -1,4 +1,5 @@
 const goalsArray = ['motor__jt200', 'iphone__15pro', 'apple__watch', 'airpod__2']
+const mySelf = { id: 72, name: 'Pourya Soleimani', age: 32, job: 'FullStack Developer' }
 
 //^ FOR LOOP
 // for (let i = 0; i < goalsArray.length; i++) {
@@ -94,6 +95,9 @@ const goalsArray = ['motor__jt200', 'iphone__15pro', 'apple__watch', 'airpod__2'
 // }, [])
 // console.log(reducedNames)
 // reducedNames.map(i => console.log(i.toUpperCase()))
-// ====================================================================
-
-
+// ARRAY DESTRUCTURING ====================================================================
+// const [a, b] = goalsArray
+// console.log({ a, b })
+// OBJECT DESTRUCTURING ====================================================================
+// const { age, job } = mySelf
+// console.log({ age, job })
