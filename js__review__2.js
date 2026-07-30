@@ -154,3 +154,24 @@ const tokenValueTag = document.querySelector('.token__value')
 const token = document.cookie.split(';').find(i => i.includes('token'))
 const tokenValue = token.slice(token.indexOf("=") + 1)
 tokenValueTag.innerHTML = tokenValue
+
+
+let rememberMe = false
+const checkBox = document.querySelector('#check__box')
+const loginBtn = document.querySelector('.login__btn')
+
+checkBox.addEventListener('change', () => {
+  rememberMe = !rememberMe
+  console.log(rememberMe)
+})
+
+loginBtn.addEventListener('click', () => {
+  if (rememberMe) {
+    const now = new Date()
+    now.setDate(now.getTime() + 3 * 24 * 60 * 60 * 1000)
+    document.cookie = `loginToken=__token;path=/;expires=${now}`
+    console.log('🟩 REMEMBER ME LOGIN')
+  } else {
+    console.log('🟧 NORMAL LOGIN')
+  }
+})
