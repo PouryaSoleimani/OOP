@@ -54,4 +54,20 @@ const goalsArray = ['motor__jt200', 'iphone__15pro', 'apple__watch', 'airpod__2'
 // console.log({ _captcha, randomCharIndex })
 
 //^ STRING METHODS
-// TRIM / 
+// TRIM /
+
+//^ ASYNC / AWAIT
+// const res = await fetch('https://fakestoreapi.com/users')
+// const data = await res.json()
+// console.log('DATA =>', data)
+
+// async function fetchData(url) {
+//   const response = await fetch(url)
+//   const data = await response.json()
+//   return data
+// }
+
+// const result = await fetchData('https://fakestoreapi.com/users')
+// console.log('result', result)
+
+
