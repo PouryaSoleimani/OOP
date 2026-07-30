@@ -1,11 +1,11 @@
 const goalsArray = ['motor__jt200', 'iphone__15pro', 'apple__watch', 'airpod__2']
 const mySelf = { id: 72, name: 'Pourya Soleimani', age: 32, job: 'FullStack Developer' }
 const products = [
-  {id : 1 , title : 'product__1' , price : 300_000},
-  {id : 2 , title : 'product__2' , price : 200_000},
-  {id : 3 , title : 'product__3' , price : 400_000},
-  {id : 4 , title : 'product__4' , price : 500_000},
-  {id : 5 , title : 'product__5' , price : 100_000},
+  { id: 1, title: 'product__1', price: 300_000 },
+  { id: 2, title: 'product__2', price: 200_000 },
+  { id: 3, title: 'product__3', price: 400_000 },
+  { id: 4, title: 'product__4', price: 500_000 },
+  { id: 5, title: 'product__5', price: 100_000 },
 ]
 
 //^ FOR LOOP
@@ -119,6 +119,5 @@ const products = [
 // result()
 // BIND RETURNS A FUNCTION & CALL/APPLY RETURNS A VALUE
 
-const sorted = products.sort((a , b) => b.price - a.price )
-console.log('sorted =>' , sorted)
-
+const sorted = products.sort((a, b) => b.price - a.price)
+console.log('sorted =>', sorted)
