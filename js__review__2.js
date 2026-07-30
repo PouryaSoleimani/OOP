@@ -111,3 +111,5 @@ const mySelf = { id: 72, name: 'Pourya Soleimani', age: 32, job: 'FullStack Deve
 // const result = caller.bind(mySelf)
 // result()
 // BIND RETURNS A FUNCTION & CALL/APPLY RETURNS A VALUE
+
+ 
