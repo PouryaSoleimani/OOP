@@ -102,3 +102,8 @@ const mySelf = { id: 72, name: 'Pourya Soleimani', age: 32, job: 'FullStack Deve
 // const { age, job } = mySelf
 // console.log({ age, job })
 // BIND / CALL / APPLY =====================================================================
+function caller() {
+  console.log(this.id, this.name, this.age)
+}
+const result = caller.bind(mySelf)
+result()
