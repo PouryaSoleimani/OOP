@@ -70,8 +70,28 @@ const goalsArray = ['motor__jt200', 'iphone__15pro', 'apple__watch', 'airpod__2'
 // const result = await fetchData('https://fakestoreapi.com/users')
 // console.log('result', result)
 
-//^ REDUCE 
-const result = goalsArray.reduce((a, b) => {
-  return a.toUpperCase() + `/ ${b.toUpperCase()}`
-}, "")
-console.log('MY GOALS', result.slice(1))
+//^ REDUCE
+// const result = goalsArray.reduce((a, b) => {
+//   return a.toUpperCase() + `/ ${b.toUpperCase()}`
+// }, "")
+// console.log('MY GOALS', result.slice(1))
+// ====================================================================
+// const products = [
+//   { id: 1, title: 'product__1', price: 300_000 },
+//   { id: 2, title: 'product__2', price: 200_000 },
+//   { id: 3, title: 'product__3', price: 400_000 },
+//   { id: 4, title: 'product__4', price: 600_000 },
+// ]
+// ====================================================================
+// const pricesSum = products.reduce((a, b) => {
+//   return a + b.price
+// }, 0)
+// console.log(pricesSum.toLocaleString())
+// ====================================================================
+const names = [['mamad', 'reza'], ['mohsen', 'majid']]
+const reducedNames = names.reduce((a, b) => {
+  return [...a, ...b]
+}, [])
+console.log(reducedNames)
+reducedNames.map(i => console.log(i.toUpperCase()))
+// ====================================================================

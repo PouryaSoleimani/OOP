@@ -531,31 +531,31 @@
 
 
 // REDUCE -------------------------------------------------------------------------------------------------------------------------
-const numbers = ["i", " am", " a", ' Fullstack', "Developer"]
-numbers.reduce((prev, current) => {
-  console.log(prev, current)
-  return prev + current
-})
+// const numbers = ["i", " am", " a", ' Fullstack', "Developer"]
+// numbers.reduce((prev, current) => {
+//   console.log(prev, current)
+//   return prev + current
+// })
 
-const prices = [350, 200, 20, 5, 120]
-const totalPrice = prices.reduce((a, b) => {
-  return a + b
-})
-console.log('total price =>', totalPrice)
+// const prices = [350, 200, 20, 5, 120]
+// const totalPrice = prices.reduce((a, b) => {
+//   return a + b
+// })
+// console.log('total price =>', totalPrice)
 
 
-const objects = [
-  { id: 1, title: 'motor__aerox', price: 350 },
-  { id: 2, title: 'iphone', price: 200 },
-  { id: 3, title: 'airpod & iwatch', price: 25 },
-  { id: 4, title: 'monitor__49inch', price: 120 },
-]
+// const objects = [
+//   { id: 1, title: 'motor__aerox', price: 350 },
+//   { id: 2, title: 'iphone', price: 200 },
+//   { id: 3, title: 'airpod & iwatch', price: 25 },
+//   { id: 4, title: 'monitor__49inch', price: 120 },
+// ]
 
-const totalObjectPrice = objects.reduce((a, b) => {
-  return a + b.price
-}, 0)
+// const totalObjectPrice = objects.reduce((a, b) => {
+//   return a + b.price
+// }, 0)
 
-console.log("total objects price", `${totalObjectPrice}/000/000 Tomans`)
+// console.log("total objects price", `${totalObjectPrice}/000/000 Tomans`)
 
 const names = [['amin', 'mohammad'], ['ali', 'majid'], ['reza', 'mohsen']]
 
