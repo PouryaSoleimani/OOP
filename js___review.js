@@ -58,13 +58,13 @@
 // const text = "123456790abcdefghijklmnopqrstuvwxyz";
 // let char = Math.floor(Math.random() * text.length);
 // let captcha = `
-// ${text[Math.floor(Math.random() * text.length)]} 
-// ${text[Math.floor(Math.random() * text.length)]} 
-// ${text[Math.floor(Math.random() * text.length)]} 
-// ${text[Math.floor(Math.random() * text.length)]} 
-// ${text[Math.floor(Math.random() * text.length)]} 
-// ${text[Math.floor(Math.random() * text.length)]} 
-// ${text[Math.floor(Math.random() * text.length)]} 
+// ${text[Math.floor(Math.random() * text.length)]}
+// ${text[Math.floor(Math.random() * text.length)]}
+// ${text[Math.floor(Math.random() * text.length)]}
+// ${text[Math.floor(Math.random() * text.length)]}
+// ${text[Math.floor(Math.random() * text.length)]}
+// ${text[Math.floor(Math.random() * text.length)]}
+// ${text[Math.floor(Math.random() * text.length)]}
 // ${text[Math.floor(Math.random() * text.length)]}`
 //   .replaceAll(" ", "")
 //   .replaceAll("\n", "");
@@ -92,12 +92,12 @@
 
 // const shortLinkAddedArray = products.map((p) => {
 //   let captcha = `
-//         ${text[Math.floor(Math.random() * text.length)]} 
-//         ${text[Math.floor(Math.random() * text.length)]} 
-//         ${text[Math.floor(Math.random() * text.length)]} 
-//         ${text[Math.floor(Math.random() * text.length)]} 
-//         ${text[Math.floor(Math.random() * text.length)]} 
-//         ${text[Math.floor(Math.random() * text.length)]} 
+//         ${text[Math.floor(Math.random() * text.length)]}
+//         ${text[Math.floor(Math.random() * text.length)]}
+//         ${text[Math.floor(Math.random() * text.length)]}
+//         ${text[Math.floor(Math.random() * text.length)]}
+//         ${text[Math.floor(Math.random() * text.length)]}
+//         ${text[Math.floor(Math.random() * text.length)]}
 //         ${text[Math.floor(Math.random() * text.length)]}
 //         ${text[Math.floor(Math.random() * text.length)]}`
 //     .replaceAll(" ", "")
@@ -315,7 +315,7 @@
 
 
 
-// PROMISE EXAMPLE 
+// PROMISE EXAMPLE
 // let isLoggedIn = true
 // const myPromise = new Promise((resolve, reject) => {
 //   let data = 'pourya'

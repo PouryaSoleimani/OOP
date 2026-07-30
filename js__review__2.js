@@ -95,3 +95,5 @@ const goalsArray = ['motor__jt200', 'iphone__15pro', 'apple__watch', 'airpod__2'
 // console.log(reducedNames)
 // reducedNames.map(i => console.log(i.toUpperCase()))
 // ====================================================================
+
+
