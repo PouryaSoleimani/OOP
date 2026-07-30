@@ -88,10 +88,10 @@ const goalsArray = ['motor__jt200', 'iphone__15pro', 'apple__watch', 'airpod__2'
 // }, 0)
 // console.log(pricesSum.toLocaleString())
 // ====================================================================
-const names = [['mamad', 'reza'], ['mohsen', 'majid']]
-const reducedNames = names.reduce((a, b) => {
-  return [...a, ...b]
-}, [])
-console.log(reducedNames)
-reducedNames.map(i => console.log(i.toUpperCase()))
+// const names = [['mamad', 'reza'], ['mohsen', 'majid']]
+// const reducedNames = names.reduce((a, b) => {
+//   return [...a, ...b]
+// }, [])
+// console.log(reducedNames)
+// reducedNames.map(i => console.log(i.toUpperCase()))
 // ====================================================================
