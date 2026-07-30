@@ -119,5 +119,11 @@ const products = [
 // result()
 // BIND RETURNS A FUNCTION & CALL/APPLY RETURNS A VALUE
 
-const sorted = products.sort((a, b) => b.price - a.price)
-console.log('sorted =>', sorted)
+
+// GITHUB DARK DEFAULT FOR LIFE
+
+//^ SORT
+// const shuffled = products.sort(() => Math.random() - 0.5)
+// console.log(shuffled)
+
+
