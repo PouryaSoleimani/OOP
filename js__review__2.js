@@ -42,13 +42,16 @@ const goalsArray = ['motor__jt200', 'iphone__15pro', 'apple__watch', 'airpod__2'
 // const splited = myDream.split("") // RETURNS AN ARRAY FORM A STRING
 
 //^ CAPTCHA
-const text = "123456790abcdefghijklmnopqrstuvwxyz";
+// const text = "123456790abcdefghijklmnopqrstuvwxyz";
 
-let _captcha = "";
-let randomCharIndex;
-for (let i = 0; i < 7; i++) {
-  randomCharIndex = Math.floor(Math.random() * text.length);
-  _captcha += text[randomCharIndex];
-}
+// let _captcha = "";
+// let randomCharIndex;
+// for (let i = 0; i < 7; i++) {
+//   randomCharIndex = Math.floor(Math.random() * text.length);
+//   _captcha += text[randomCharIndex];
+// }
 
-console.log({ _captcha, randomCharIndex })
+// console.log({ _captcha, randomCharIndex })
+
+//^ STRING METHODS
+// TRIM / 
