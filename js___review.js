@@ -507,27 +507,27 @@
 
 
 // THIS -------------------------------------------------------------------------------------------------------------------------
-const object = {
-  firstname: 'pourya',
-  lastname: 'soleimani',
-  job: "FullStack Developer",
+// const object = {
+//   firstname: 'pourya',
+//   lastname: 'soleimani',
+//   job: "FullStack Developer",
 
-  showInfos() {
-    console.log(`${this.firstname} ${this.lastname} - ${this.job}`)
-  },
+//   showInfos() {
+//     console.log(`${this.firstname} ${this.lastname} - ${this.job}`)
+//   },
 
-  setFirstName(newName) {
-    this.firstname = newName
-  },
+//   setFirstName(newName) {
+//     this.firstname = newName
+//   },
 
-  setLastname(newLastName) {
-    this.lastname = newLastName
-  }
-}
+//   setLastname(newLastName) {
+//     this.lastname = newLastName
+//   }
+// }
 
-object.setFirstName('Pourya')
-object.setLastname('Soleimani')
-object.showInfos()
+// object.setFirstName('Pourya')
+// object.setLastname('Soleimani')
+// object.showInfos()
 
 
 // REDUCE -------------------------------------------------------------------------------------------------------------------------

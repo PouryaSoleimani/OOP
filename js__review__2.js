@@ -70,4 +70,8 @@ const goalsArray = ['motor__jt200', 'iphone__15pro', 'apple__watch', 'airpod__2'
 // const result = await fetchData('https://fakestoreapi.com/users')
 // console.log('result', result)
 
-
+//^ REDUCE 
+const result = goalsArray.reduce((a, b) => {
+  return a.toUpperCase() + `/ ${b.toUpperCase()}`
+}, "")
+console.log('MY GOALS', result.slice(1))
