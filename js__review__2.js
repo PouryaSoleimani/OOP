@@ -95,12 +95,15 @@ const mySelf = { id: 72, name: 'Pourya Soleimani', age: 32, job: 'FullStack Deve
 // }, [])
 // console.log(reducedNames)
 // reducedNames.map(i => console.log(i.toUpperCase()))
+
 // ARRAY DESTRUCTURING ====================================================================
 // const [a, b] = goalsArray
 // console.log({ a, b })
+
 // OBJECT DESTRUCTURING ====================================================================
 // const { age, job } = mySelf
 // console.log({ age, job })
+
 // BIND / CALL / APPLY =====================================================================
 // function caller() {
 //   console.log(this.id, this.name, this.age)
