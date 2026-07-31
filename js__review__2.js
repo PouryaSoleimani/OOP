@@ -215,7 +215,11 @@ loginBtn.addEventListener('click', () => {
 
 //^ SYMBOL
 // SYMBOL => UNIQUE VALUE
-const symbol = new Symbol('optional description')
-console.log(symbol)
+// const symbol = new Symbol('optional description')
+// console.log(symbol)
 
-let userIdSymbol = new Symbol('user_id symbol')
+// let userIdSymbol = new Symbol('user_id symbol')
+
+//^ NULLISH OPERATOR
+
+
