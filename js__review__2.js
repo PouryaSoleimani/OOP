@@ -191,23 +191,26 @@ loginBtn.addEventListener('click', () => {
 
 //^ WEAK_MAP & WEAK_SET
 // WEAK SET ONLY ACCEPT OBJECTS
-// window.var = var 
+// window.var = var
 
 //^ PROXY
-const user = { id: 1, username: "pourya_soleimani", age: 32 }
+// const user = { id: 1, username: "pourya_soleimani", age: 32 }
 
-const proxyUser = new Proxy(user, {
-  get: function (target, prop) {
-    console.log(target, prop)
-    return { target: target[prop] }
-  },
+// const proxyUser = new Proxy(user, {
+//   get: function (target, prop) {
+//     console.log(target, prop)
+//     return { target: target[prop] }
+//   },
 
-  set: function (target, prop, value) {
-    if (prop == 'age' && value < 0) {
-      value = 18
-    }
-    target[property] = value
-  }
-})
+//   set: function (target, prop, value) {
+//     if (prop == 'age' && value < 0) {
+//       value = 18
+//     }
+//     target[property] = value
+//   }
+// })
 
-console.log(proxyUser.id)
+// console.log(proxyUser.id)
+
+
+//^ SYMBOL
