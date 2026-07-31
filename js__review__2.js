@@ -214,3 +214,6 @@ loginBtn.addEventListener('click', () => {
 
 
 //^ SYMBOL
+// SYMBOL => UNIQUE VALUE
+const symbol = new Symbol()
+console.log(symbol)
