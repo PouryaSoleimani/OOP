@@ -177,7 +177,13 @@ loginBtn.addEventListener('click', () => {
 })
 
 //^ SET
-const numbers = [2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-const set = new Set(numbers)
-const sortedSet = [...set].sort((a, b) => a - b)
-console.log('set =>', sortedSet)
+// const numbers = [2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+// const set = new Set(numbers)
+// const sortedSet = [...set].sort((a, b) => a - b)
+// console.log('set =>', sortedSet)
+
+//^ MAP 
+const myObject = { id: 1, title: 'object__1', isAvailable: true }
+const mapped = new Map(Object.entries(myObject))
+const objected = Object.fromEntries(mapped)
+console.log(objected)
