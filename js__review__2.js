@@ -182,8 +182,13 @@ loginBtn.addEventListener('click', () => {
 // const sortedSet = [...set].sort((a, b) => a - b)
 // console.log('set =>', sortedSet)
 
-//^ MAP 
-const myObject = { id: 1, title: 'object__1', isAvailable: true }
-const mapped = new Map(Object.entries(myObject))
-const objected = Object.fromEntries(mapped)
-console.log(objected)
+//^ MAP
+// const myObject = { id: 1, title: 'object__1', isAvailable: true }
+// const mapped = new Map(Object.entries(myObject))
+// const objected = Object.fromEntries(mapped)
+// console.log(objected)
+
+
+//^ WEAK_MAP & WEAK_SET
+// WEAK SET ONLY ACCEPT OBJECTS
+ 
