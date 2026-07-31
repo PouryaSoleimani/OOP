@@ -175,3 +175,9 @@ loginBtn.addEventListener('click', () => {
     console.log('🟧 NORMAL LOGIN')
   }
 })
+
+//^ SET
+const numbers = [2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+const set = new Set(numbers)
+const sortedSet = [...set].sort((a, b) => a - b)
+console.log('set =>', sortedSet)
