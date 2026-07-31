@@ -195,15 +195,18 @@ loginBtn.addEventListener('click', () => {
 
 //^ PROXY
 const user = { id: 1, username: "pourya_soleimani", age: 32 }
+
 const proxyUser = new Proxy(user, {
   get: function (target, prop) {
     console.log(target, prop)
     return { target: target[prop] }
   },
 
-  set: function (target, prop) {
-    console.log(target, prop)
-    return prop
+  set: function (target, prop, value) {
+    if (prop == 'age' && value < 0) {
+      value = 18
+    }
+    target[property] = value
   }
 })
 
