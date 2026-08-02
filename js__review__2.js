@@ -220,6 +220,6 @@ loginBtn.addEventListener('click', () => {
 
 // let userIdSymbol = new Symbol('user_id symbol')
 
-//^ NULLISH OPERATOR
+//^ NULLISH OPERATOR -> ??
 
 
