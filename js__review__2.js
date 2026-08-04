@@ -70,11 +70,11 @@ const products = [
 // const data = await res.json()
 // console.log('DATA =>', data)
 
-// async function fetchData(url) {
-//   const response = await fetch(url)
-//   const data = await response.json()
-//   return data
-// }
+async function fetchData(url) {
+  const response = await fetch(url)
+  const data = await response.json()
+  return data
+}
 
 // const result = await fetchData('https://fakestoreapi.com/users')
 // console.log('result', result)
@@ -290,4 +290,11 @@ console.log({ devices, userMedia })
 
 video.addEventListener('loadedmetadata', () => {
   video.play()
-})  
+})
+
+function stopCamera() {
+  const stream = video.srcObject;
+  const tracks = stream.getTracks()
+  tracks.forEach((track) => track.stop())
+  video.srcObject = null
+}
