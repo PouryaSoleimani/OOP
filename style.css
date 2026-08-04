@@ -88,7 +88,10 @@ input {
   &[type="text"],
   &[type="password"],
   &[type="email"] {
-    width: 100%;
+    width: auto;
+    margin: 128px;
+    outline: 8px solid #ffffff30;
+
   }
 }
 
@@ -715,6 +718,57 @@ select {
   &:hover {
     background-color: black;
   }
+}
+
+.pass__messages {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  width: fit-content;
+  min-width: 380px;
+  outline: 8px solid #ffffff30;
+  margin: 32px auto;
+  padding: 32px;
+  height: fit-content;
+  border-radius: 32px;
+
+  p {
+    padding: 4px 8px;
+    border-radius: 8px;
+    width: fit-content;
+    color: black;
+  }
+
+  .red_message {
+    background-color: var(--danger);
+  }
+
+  .green_message {
+    background-color: greenyellow;
+  }
+}
+
+.input__field {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: fit-content;
+  padding: 32px;
+
+  i {
+    grid-area: 1/1/1/1;
+    font-size: 32px;
+    color: white;
+    justify-self: end;
+    align-self: center;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+input.password__input {
+  margin: 0;
+  grid-area: 1/1/1/1;
+}
 }
 
 /*//^ RESPONSIVE ============================================================================================ */

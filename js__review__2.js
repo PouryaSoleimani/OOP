@@ -236,4 +236,45 @@ const products = [
 const myRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>/?]).{8,}$/
 const isValid = myRegex.test('Pourya!!!')
 console.log(isValid)
--
+
+//? PASSWORD CHECK
+const patterns = [
+  { id: 1, regex: /^.*[a-z]/, message: "Lower Case" },
+  { id: 2, regex: /^.*[A-Z]/, message: "Upper Case" },
+  { id: 3, regex: /^.{8,}/, message: "length Case" },
+  { id: 4, regex: /^.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>/?]/, message: "Special Characters" },
+  { id: 5, regex: /^.*[0-9]/, message: "Number" },
+]
+
+const inputvalue = document.querySelector('.password__input')
+const messagesContainer = document.querySelector('.pass__messages')
+const eye = document.querySelector('.password__eye')
+
+
+let userPassword = ''
+inputvalue.addEventListener('keyup', (e) => {
+  const val = e.target.value
+  userPassword = val
+})
+
+inputvalue.addEventListener('blur', () => {
+  messagesContainer.innerHTML = ''
+  patterns.forEach((pattern) => {
+    const { regex, message } = pattern
+    let result = regex.test(userPassword)
+    console.log({ userPassword, result, message })
+    messagesContainer.insertAdjacentHTML('beforeend', `
+      <p class="${result ? 'green_message' : 'red_message'}">${message}<p>
+      `)
+  })
+  console.log(document.querySelectorAll('.red'))
+  if (!document.querySelectorAll('.red_message').length) {
+    inputvalue.style.setProperty('background-color', '#51f20591')
+  }
+})
+
+let type = 'password'
+eye.addEventListener('click', () => {
+  inputvalue.setAttribute('type', inputvalue.getAttribute('type') == 'password' ? 'text' : 'password')
+})
+
