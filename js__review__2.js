@@ -1,3 +1,4 @@
+
 const goalsArray = ['motor__jt200', 'iphone__15pro', 'apple__watch', 'airpod__2']
 const mySelf = { id: 72, name: 'Pourya Soleimani', age: 32, job: 'FullStack Developer' }
 const products = [
@@ -127,54 +128,54 @@ const products = [
 // console.log(shuffled)
 
 //^ COOKIES
-const addBtn = document.querySelector('.add__cookie')
-const updateBtn = document.querySelector('.update__cookie')
-const deleteBtn = document.querySelector('.delete__cookie')
+// const addBtn = document.querySelector('.add__cookie')
+// const updateBtn = document.querySelector('.update__cookie')
+// const deleteBtn = document.querySelector('.delete__cookie')
 
-addBtn.addEventListener('click', () => {
-  const now = new Date()
-  now.setTime(now.getTime() + 7 * 24 * 60 * 60 * 1000) // 1 WEEK EXPIRES TIME
-  document.cookie = `username=PouryaSoleimani;path:/;expires=${now}`
-  document.cookie = `_token=29103kojafncaklsjjd12984rukajscnasklj19872;path:/;expires=${now}`
-})
+// addBtn.addEventListener('click', () => {
+//   const now = new Date()
+//   now.setTime(now.getTime() + 7 * 24 * 60 * 60 * 1000) // 1 WEEK EXPIRES TIME
+//   document.cookie = `username=PouryaSoleimani;path:/;expires=${now}`
+//   document.cookie = `_token=29103kojafncaklsjjd12984rukajscnasklj19872;path:/;expires=${now}`
+// })
 
-updateBtn.addEventListener('click', () => {
-  const now = new Date()
-  now.setTime(now.getTime() + 2 * 24 * 60 * 60 * 1000)
-  document.cookie = `username=PouryaSoleimani2;path:/;expires=${now}`
-})
+// updateBtn.addEventListener('click', () => {
+//   const now = new Date()
+//   now.setTime(now.getTime() + 2 * 24 * 60 * 60 * 1000)
+//   document.cookie = `username=PouryaSoleimani2;path:/;expires=${now}`
+// })
 
-deleteBtn.addEventListener('click', () => {
-  const now = new Date()
-  now.setTime(now.getTime() - 2 * 24 * 60 * 60 * 1000)
-  document.cookie = `username=PouryaSoleimani2;path:/;expires=${now}`
-})
+// deleteBtn.addEventListener('click', () => {
+//   const now = new Date()
+//   now.setTime(now.getTime() - 2 * 24 * 60 * 60 * 1000)
+//   document.cookie = `username=PouryaSoleimani2;path:/;expires=${now}`
+// })
 
-const tokenValueTag = document.querySelector('.token__value')
-const token = document.cookie.split(';').find(i => i.includes('_token'))
-const tokenValue = token?.slice(token.indexOf("=") + 1)
-tokenValueTag.innerHTML = tokenValue
+// const tokenValueTag = document.querySelector('.token__value')
+// const token = document.cookie.split(';').find(i => i.includes('_token'))
+// const tokenValue = token?.slice(token.indexOf("=") + 1)
+// tokenValueTag.innerHTML = tokenValue
 
 
-let rememberMe = false
-const checkBox = document.querySelector('#check__box')
-const loginBtn = document.querySelector('.login__btn')
+// let rememberMe = false
+// const checkBox = document.querySelector('#check__box')
+// const loginBtn = document.querySelector('.login__btn')
 
-checkBox.addEventListener('change', () => {
-  rememberMe = !rememberMe
-  console.log(rememberMe)
-})
+// checkBox.addEventListener('change', () => {
+//   rememberMe = !rememberMe
+//   console.log(rememberMe)
+// })
 
-loginBtn.addEventListener('click', () => {
-  if (rememberMe) {
-    const now = new Date()
-    now.setDate(now.getTime() + 3 * 24 * 60 * 60 * 1000)
-    document.cookie = `loginToken=__token;path=/;expires=${now}`
-    console.log('🟩 REMEMBER ME LOGIN')
-  } else {
-    console.log('🟧 NORMAL LOGIN')
-  }
-})
+// loginBtn.addEventListener('click', () => {
+//   if (rememberMe) {
+//     const now = new Date()
+//     now.setDate(now.getTime() + 3 * 24 * 60 * 60 * 1000)
+//     document.cookie = `loginToken=__token;path=/;expires=${now}`
+//     console.log('🟩 REMEMBER ME LOGIN')
+//   } else {
+//     console.log('🟧 NORMAL LOGIN')
+//   }
+// })
 
 
 //^ SET
@@ -223,7 +224,7 @@ loginBtn.addEventListener('click', () => {
 
 //^ NULLISH OPERATOR -> ??
 
-
-document.addEventListener('DOMContentLoaded', () => {
-  document.cookie = 'loadCookie=loadCookie;path:/;Secure ; SameSite=None; Http'
-})
+// document.addEventListener('DOMContentLoaded', () => {
+//   document.cookie =
+// "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=None; Secure";
+// })
