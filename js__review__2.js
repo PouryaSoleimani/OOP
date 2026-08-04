@@ -256,18 +256,21 @@ inputvalue.addEventListener('keyup', (e) => {
   const val = e.target.value
   userPassword = val
 })
-
+let html = []
 inputvalue.addEventListener('blur', () => {
-  messagesContainer.innerHTML = ''
+  messagesContainer.innerHTML = ``
   patterns.forEach((pattern) => {
     const { regex, message } = pattern
     let result = regex.test(userPassword)
     console.log({ userPassword, result, message })
-    messagesContainer.insertAdjacentHTML('beforeend', `
-      <p class="${result ? 'green_message' : 'red_message'}">${message}<p>
+    html.push(`
+     <p class="${result ? 'green_message' : 'red_message'}">${message}</p>
       `)
   })
+
+  messagesContainer.innerHTML = html.join('')
   console.log(document.querySelectorAll('.red'))
+
   if (!document.querySelectorAll('.red_message').length) {
     inputvalue.style.setProperty('background-color', '#51f20591')
   }
