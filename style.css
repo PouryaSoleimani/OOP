@@ -771,6 +771,11 @@ input.password__input {
 }
 }
 
+video {
+  margin: 128px;
+  border-radius: 32px;
+  outline: 9px solid #ffffff30;
+}
 /*//^ RESPONSIVE ============================================================================================ */
 @media (max-width: 768px) {
   .query__box {

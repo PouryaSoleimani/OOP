@@ -278,3 +278,16 @@ eye.addEventListener('click', () => {
   inputvalue.setAttribute('type', inputvalue.getAttribute('type') == 'password' ? 'text' : 'password')
 })
 
+// INDEXED DB
+
+//^ VIDEO & WEBCAM
+const video = document.querySelector('video')
+const devices = await navigator.mediaDevices.enumerateDevices().then(data => data)
+const userMedia = await navigator.mediaDevices.getUserMedia({ video: true }).then(res => res)
+video.srcObject = userMedia
+
+console.log({ devices, userMedia })
+
+video.addEventListener('loadedmetadata', () => {
+  video.play()
+})  
