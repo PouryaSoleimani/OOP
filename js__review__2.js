@@ -232,3 +232,8 @@ const products = [
 // "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=None; Secure";
 // })
 
+//^ PASSWORD SECURITY CHECK
+const myRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>/?]).{8,}$/
+const isValid = myRegex.test('Pourya!!!')
+console.log(isValid)
+-
