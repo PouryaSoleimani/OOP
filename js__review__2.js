@@ -133,7 +133,7 @@ const deleteBtn = document.querySelector('.delete__cookie')
 
 addBtn.addEventListener('click', () => {
   const now = new Date()
-  now.setTime(now.getTime() + 2 * 24 * 60 * 60 * 1000)
+  now.setTime(now.getTime() + 7 * 24 * 60 * 60 * 1000) // 1 WEEK EXPIRES TIME
   document.cookie = `username=PouryaSoleimani;path:/;expires=${now}`
   document.cookie = `token=29103kojafncaklsjjd12984rukajscnasklj19872;path:/;expires=${now}`
 })
