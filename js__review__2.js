@@ -176,6 +176,7 @@ loginBtn.addEventListener('click', () => {
   }
 })
 
+
 //^ SET
 // const numbers = [2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 // const set = new Set(numbers)
@@ -223,3 +224,6 @@ loginBtn.addEventListener('click', () => {
 //^ NULLISH OPERATOR -> ??
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  document.cookie = 'loadCookie=loadCookie;path:/;Secure ; SameSite=None; Http'
+})
