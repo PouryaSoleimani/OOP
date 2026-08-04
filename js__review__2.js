@@ -179,10 +179,13 @@ const products = [
 
 
 //^ SET
-// const numbers = [2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-// const set = new Set(numbers)
-// const sortedSet = [...set].sort((a, b) => a - b)
-// console.log('set =>', sortedSet)
+const numbers = [2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+const set = new Set(numbers)
+set.add(10)
+set.add(11)
+set.delete(11)
+const sortedSet = [...set].sort((a, b) => a - b)
+console.log('set =>', { sortedSet, size: set.size, has: set.has(10),   })
 
 //^ MAP
 // const myObject = { id: 1, title: 'object__1', isAvailable: true }
@@ -228,3 +231,4 @@ const products = [
 //   document.cookie =
 // "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=None; Secure";
 // })
+
