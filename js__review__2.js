@@ -135,7 +135,7 @@ addBtn.addEventListener('click', () => {
   const now = new Date()
   now.setTime(now.getTime() + 7 * 24 * 60 * 60 * 1000) // 1 WEEK EXPIRES TIME
   document.cookie = `username=PouryaSoleimani;path:/;expires=${now}`
-  document.cookie = `token=29103kojafncaklsjjd12984rukajscnasklj19872;path:/;expires=${now}`
+  document.cookie = `_token=29103kojafncaklsjjd12984rukajscnasklj19872;path:/;expires=${now}`
 })
 
 updateBtn.addEventListener('click', () => {
@@ -151,8 +151,8 @@ deleteBtn.addEventListener('click', () => {
 })
 
 const tokenValueTag = document.querySelector('.token__value')
-const token = document.cookie.split(';').find(i => i.includes('token'))
-const tokenValue = token.slice(token.indexOf("=") + 1)
+const token = document.cookie.split(';').find(i => i.includes('_token'))
+const tokenValue = token?.slice(token.indexOf("=") + 1)
 tokenValueTag.innerHTML = tokenValue
 
 
