@@ -126,7 +126,7 @@ const products = [
 // const shuffled = products.sort(() => Math.random() - 0.5)
 // console.log(shuffled)
 
-// COOKIES
+//^ COOKIES
 const addBtn = document.querySelector('.add__cookie')
 const updateBtn = document.querySelector('.update__cookie')
 const deleteBtn = document.querySelector('.delete__cookie')
