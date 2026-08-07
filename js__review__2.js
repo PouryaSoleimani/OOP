@@ -285,23 +285,38 @@ eye.addEventListener('click', () => {
 // INDEXED DB ==================================================================================================================================
 
 //^ VIDEO & WEBCAM ==================================================================================================================================
-const video = document.querySelector('video')
-const devices = await navigator.mediaDevices.enumerateDevices().then(data => data)
-const userMedia = await navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(res => res)
-video.srcObject = userMedia
+// const video = document.querySelector('video')
+// const devices = await navigator.mediaDevices.enumerateDevices().then(data => data)
+// const userMedia = await navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(res => res)
+// video.srcObject = userMedia
 
-console.log({ devices, userMedia })
+// console.log({ devices, userMedia })
 
-video.addEventListener('loadedmetadata', () => {
-  video.play()
-})
+// video.addEventListener('loadedmetadata', () => {
+//   video.play()
+// })
 
-function stopCamera() {
-  const stream = video.srcObject;
-  const tracks = stream.getTracks()
-  tracks.forEach((track) => track.stop())
-  video.srcObject = null
+// function stopCamera() {
+//   const stream = video.srcObject;
+//   const tracks = stream.getTracks()
+//   tracks.forEach((track) => track.stop())
+//   video.srcObject = null
+// }
+
+
+//^ PROMISE.ALL ==================================================================================================================================
+
+async function getUsers() {
+  const res = await fetch('https://fakestoreapi.com/users')
+  const data = await res.json()
+  return data
 }
 
+async function getProducts() {
+  const res = await fetch('https://fakestoreapi.com/products')
+  const data = await res.json()
+  return data
+}
 
-//^ PROMISE.ALL
+const data = await Promise.all([getProducts(), getUsers()]);
+console.log('data =>', data)
