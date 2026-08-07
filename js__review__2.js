@@ -340,3 +340,7 @@ const [users2, courses2] = await Promise.allSettled([getProducts2(), getUsers2()
 
 console.log('data =>', { users2, courses2 })
 //OUTPUT => { users : {status : ... , value : ...}, products : {status : ... , value : ...}}
+
+
+//^ PROMISE.RACE  ==================================================================================================================================
+const [users3, courses3] = await Promise.race([getProducts2(), getUsers2()]); // RETURNS ONLY THE FIRST RESOLVED PROMISE
