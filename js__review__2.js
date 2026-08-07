@@ -321,3 +321,22 @@ async function getProducts() {
 const [users, courses] = await Promise.all([getProducts(), getUsers()]);
 
 console.log('data =>', { users, courses })
+
+//^ PROMISE.ALLSETTLED ==================================================================================================================================
+
+async function getUsers2() {
+  const res = await fetch('https://fakestoreapi.com/users')
+  const data = await res.json()
+  return data
+}
+
+async function getProducts2() {
+  const res = await fetch('https://fakestoreapi.com/products')
+  const data = await res.json()
+  return data
+}
+
+const [users2, courses2] = await Promise.allSettled([getProducts2(), getUsers2()]);
+
+console.log('data =>', { users2, courses2 })
+//OUTPUT => { users : {status : ... , value : ...}, products : {status : ... , value : ...}}
