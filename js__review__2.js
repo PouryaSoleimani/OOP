@@ -375,3 +375,10 @@ const geoRes = await fetch(`http://ip-api.com/json/${ip}`)
 const geoData = await geoRes.json() // accessing ip geo datas
 
 console.log(geoData)
+
+//! FORBIDDEN => MUST PAY
+// const ipAddress = "{IP-ADDRESS}";
+// const url = `https://free.freeipapi.com/api/json/${ipAddress}`;
+// const newRes = await fetch(url)
+// const newDatas = await newRes.json()
+// console.log({ newDatas })
