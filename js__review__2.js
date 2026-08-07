@@ -400,6 +400,7 @@ const bc = new BroadcastChannel("BC")
 bc.addEventListener('message', (event) => {
   console.log(event)
 })
+
 playBtn.addEventListener('click', () => {
   bc.postMessage()
-})
+}) 
