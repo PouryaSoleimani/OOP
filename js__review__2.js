@@ -346,7 +346,6 @@ console.log('data =>', { users2, courses2 })
 const [users3, courses3] = await Promise.race([getProducts2(), getUsers2()]); // RETURNS ONLY THE FIRST RESOLVED PROMISE
 
 //^ GROUPBY  ==================================================================================================================================
-
 const productsArray = [
   { id: 1, title: 'product__1', price: 300_000, qty: 1 },
   { id: 2, title: 'product__2', price: 200_000, qty: 2 },
@@ -359,3 +358,9 @@ const prices = Object.groupBy(productsArray, (item) => {
 })
 
 console.log({ prices })
+
+//^ ARRAY.WITH  ==================================================================================================================================
+const numbers = [1, 2, 3, 4]
+const numbersWithHundred = numbers.with(0, 100) // replaces the 0 index with 100
+console.log('new numbers =>', numbersWithHundred)
+
