@@ -364,3 +364,14 @@ const numbers = [1, 2, 3, 4]
 const numbersWithHundred = numbers.with(0, 100) // replaces the 0 index with 100
 console.log('new numbers =>', numbersWithHundred)
 
+//^ IP TRACKER API ==================================================================================================================================
+const BASE_URL = "https://api.ipify.org/?format=json"
+const res = await fetch(BASE_URL)
+const data = await res.json()
+const ip = data.ip // accessing the ip 
+console.log('ip =>', ip)
+
+const geoRes = await fetch(`http://ip-api.com/json/${ip}`)
+const geoData = await geoRes.json() // accessing ip geo datas
+
+console.log(geoData)
