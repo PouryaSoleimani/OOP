@@ -287,7 +287,7 @@ eye.addEventListener('click', () => {
 //^ VIDEO & WEBCAM ==================================================================================================================================
 const video = document.querySelector('video')
 const devices = await navigator.mediaDevices.enumerateDevices().then(data => data)
-const userMedia = await navigator.mediaDevices.getUserMedia({ video: true }).then(res => res)
+const userMedia = await navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(res => res)
 video.srcObject = userMedia
 
 console.log({ devices, userMedia })
@@ -302,3 +302,6 @@ function stopCamera() {
   tracks.forEach((track) => track.stop())
   video.srcObject = null
 }
+
+
+//^ PROMISE.ALL
