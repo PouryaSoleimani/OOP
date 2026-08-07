@@ -386,10 +386,12 @@ console.log(geoData)
 // DEEP COPY & SHALLOW COPY
 // JSON.PARSE(JSON.STRINGIFY)
 
-//^ EYEDROPPER
+//^ EYEDROPPER ==================================================================================================================================
 const playBtn = document.querySelector('.play__btn')
 const eyeDropper = new EyeDropper()
 playBtn.addEventListener('click', async () => {
   const result = await eyeDropper.open()
   console.log(result)
 })
+
+// BROADCAST CHANNEL ==================================================================================================================================
