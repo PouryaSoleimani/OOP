@@ -318,5 +318,6 @@ async function getProducts() {
   return data
 }
 
-const data = await Promise.all([getProducts(), getUsers()]);
-console.log('data =>', data)
+const [users, courses] = await Promise.all([getProducts(), getUsers()]);
+
+console.log('data =>', { users, courses })
