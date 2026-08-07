@@ -382,3 +382,14 @@ console.log(geoData)
 // const newRes = await fetch(url)
 // const newDatas = await newRes.json()
 // console.log({ newDatas })
+
+// DEEP COPY & SHALLOW COPY
+// JSON.PARSE(JSON.STRINGIFY)
+
+//^ EYEDROPPER
+const playBtn = document.querySelector('.play__btn')
+const eyeDropper = new EyeDropper()
+playBtn.addEventListener('click', async () => {
+  const result = await eyeDropper.open()
+  console.log(result)
+})
